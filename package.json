@@ -2,7 +2,7 @@
   "name": "guidance",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:8080",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "antd": "^3.25.1",
     "babel-plugin-import": "^1.12.2",
@@ -10,6 +10,7 @@
     "react": "^16.11.0",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {

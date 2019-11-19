@@ -1,3 +1,41 @@
 .all{
-    color: aliceblue;
+    
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.first{
+    background-color: white;
+    height: 90px;
+}
+ .first1{
+    background-color: white;
+    height: 35px;
+} 
+.second{
+    background-color: rgb(97, 119, 192);
+    height: 380px;
+}
+.third{
+    height: 90px;
+    background-color: white;
+}
+.fourth{
+    height: 200px;
+    background-color: black;
+}
+.chara{
+    color: black;
+}
+.lun{
+    height: 380px;
+}
+.one{
+    margin-left: 20px;
+}
+.one1{
+    margin-left: 65px;
+    margin-top: 15px;
+}   
+.one p{
+    margin-left: 50px;
 }

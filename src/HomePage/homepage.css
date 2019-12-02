@@ -1,0 +1,19 @@
+.all{
+    background-color: rgb(161, 127, 255);
+    height: 1000px;
+    width: 100%;
+}
+.space{
+    background-color: rgba(12, 12, 12, 0.295);
+    height: 20px;
+    width: 100%;
+}
+.basic{
+    background-color: rgba(12, 12, 12, 0.295);
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.input{
+    background-color: #ca39399c;
+}

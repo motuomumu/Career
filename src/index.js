@@ -17,6 +17,7 @@ class IndexPage extends React.Component{
                         <Route path='/' exact component={Homepage}></Route>
                         <Route path="/login" component={LoginPage}></Route>
                         <Route path="/news" component={NewsPage}></Route>
+                        <Route path='/homepage' component={Homepage}></Route>
                     </Switch>
                 </BrowserRouter>
                

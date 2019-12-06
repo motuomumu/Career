@@ -178,6 +178,48 @@ export default class Homepage extends React.Component {
                     </Row>
                 </div>
                 <div></div>
+                <div></div>
+
+
+                <div className={HomepageCss.below}>
+                    <Row type="flex" justify="center">
+                        <Col span={3}></Col>
+
+                        <Col span={4}>
+                        <h3>zhangmaolin</h3>
+                        <h3>123456789</h3>
+                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>                   
+                        </Col>
+
+                        <Col span={4}>
+                        <h3>zengzhuhong</h3>
+                        <h3>123456789</h3>
+                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>
+                        </Col>
+
+                        <Col span={4}>                   
+                        <h3>lilan</h3>
+                        <h3>123456789</h3>        
+                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>           
+                        </Col>
+
+                        <Col span={4}>                    
+                        <h3>wujiaxin</h3>
+                        <h3>123456789</h3>        
+                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>            
+                        </Col>
+
+                        <Col span={4}>                    
+                        <h3>wangfei</h3>
+                        <h3>123456789</h3>        
+                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>           
+                        </Col>
+
+                        <Col span={1}></Col>
+                        </Row>
+               
+               
+                </div> 
             </div>
         )
     }

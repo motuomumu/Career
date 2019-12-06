@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Homepage from './HomePage/homepage'
+import Homepage from './Homepage/homepage'
 import * as serviceWorker from './serviceWorker';
-
-import {BrowserRouter,Route,Switch,Redirect} from 'react-router-dom'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
 
 
 export default class Root extends React.Component{
@@ -15,7 +13,7 @@ export default class Root extends React.Component{
                  <BrowserRouter basename='vacation'>
                  <Switch>
                  <Route path='/' exact component={Homepage}></Route>
-               
+                 <Route path='/homepage'component={Homepage} ></Route>
                 </Switch>
                 </BrowserRouter>
                

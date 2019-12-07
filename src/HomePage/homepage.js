@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import img1 from '../Image/养老院.jpg'
 import img2 from '../Image/孤儿院.jpg'
 import img3 from '../Image/福利院.jpg'
+import img4 from '../Image/图6.jpg'
 
 var HomepageCss = require("../Homepage/homepage.css")
 
@@ -55,6 +56,7 @@ const menu1 = (
         </Menu.Item>
     </Menu>
 );
+
 
 
 // const bgGround1 = {
@@ -126,7 +128,7 @@ export default class Homepage extends React.Component {
                 <div className={HomepageCss.introduce}>
                     <div className={HomepageCss.imgs}>
                         <Carousel autoplay>
-                            <div className={HomepageCss.img1}>
+                            <div className={HomepageCss.img01}>
                                 <div className={HomepageCss.write1}>
                                     <Row>
                                         <Col span={2}></Col>
@@ -140,39 +142,53 @@ export default class Homepage extends React.Component {
                                 </div>
                             </div>
                             <div>
-                                <div className={HomepageCss.img2}></div>
+                                <div className={HomepageCss.img02}></div>
                             </div>
                             <div>
-                                <div className={HomepageCss.img3}></div>
+                                <div className={HomepageCss.img03}></div>
                             </div>
                             <div>
-                                <div className={HomepageCss.img4}></div>
+                                <div className={HomepageCss.img04}></div>
                             </div>
                         </Carousel>
                     </div>
                 </div>
                 <div className={HomepageCss.card}>
-                    <Row>
+                    <Row>.
                         <Col span={2}></Col>
                         <Col span={6}>
-                            <div className={HomepageCss.img1}>
+                            <div>
+                                <div className={HomepageCss.leader}>
+                                <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
+                                </div>
+                                
                                 <div className={HomepageCss.hide1}>
-                                    shuiasdhia
-                                </div>
-                                <div className={HomepageCss.picture}>
-                                    <img src={img1} height={600} width={380}></img>
+                                    <Link to="/"><p>关爱老人<br/>从我做起</p></Link>
                                 </div>
                             </div>
                         </Col>
                         <Col span={1}></Col>
                         <Col span={6}>
-                            <div className={HomepageCss.img1}>
-                                <img src={img2} height={600} width={380} className={HomepageCss.picture}></img>
+                        <div className={HomepageCss.imgbox1}>
+                                <Carousel autoplay>
+                                    <div>
+                                        <img src={img2} height={600} width={380}></img>
+                                    </div>
+                                    <div>
+                                        <img src={img1} height={600} width={380}></img>
+                                    </div>
+                                    <div>
+                                        <img src={img4} height={600} width={380}></img>
+                                    </div>
+                                    <div>
+                                        <h3>4</h3>
+                                    </div>
+                                </Carousel>
                             </div>
                         </Col>
                         <Col span={1}></Col>
                         <Col span={6}>
-                            <div className={HomepageCss.img1}>
+                            <div className={HomepageCss.imgbox1}>
                                 <img src={img3} height={600} width={380}></img>
                             </div>
                         </Col>

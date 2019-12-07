@@ -3,18 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Homepage from './Homepage/homepage'
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import {BrowserRouter,Route,Switch,Redirect,Link} from 'react-router-dom';
+import LoginPage from './Login/login';
+import NewsPage from './News/news'
 
-
-export default class Root extends React.Component{
+class IndexPage extends React.Component{
     render(){
         return(
             <div>
-                 <BrowserRouter basename='vacation'>
-                 <Switch>
-                 <Route path='/' exact component={Homepage}></Route>
-                 <Route path='/homepage'component={Homepage} ></Route>
-                </Switch>
+                <BrowserRouter>
+                    <Switch>
+                        <Route path='/' exact component={Homepage}></Route>
+                        <Route path="/login" component={LoginPage}></Route>
+                        <Route path="/news" component={NewsPage}></Route>
+                        <Route path='/homepage' component={Homepage}></Route>
+                    </Switch>
                 </BrowserRouter>
                
             </div>
@@ -22,7 +25,7 @@ export default class Root extends React.Component{
     }
 }
   
-ReactDOM.render(<Root />, document.getElementById('root'));
+ReactDOM.render(<IndexPage />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

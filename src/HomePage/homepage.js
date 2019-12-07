@@ -106,8 +106,9 @@ export default class Homepage extends React.Component {
                                 title="需要跳转页面吗?"
                                 onConfirm={confirm}
                                 onCancel={cancel}
-                                okText="登陆"
+                                okText="登陆 "
                                 cancelText="注册"
+
                             >
                                 <Button type="link">
                                     <Link to=""><Avatar icon="user" /></Link>
@@ -121,6 +122,7 @@ export default class Homepage extends React.Component {
                         </Col>
                     </Row>
                 </div>
+               
                 <div className={HomepageCss.introduce}>
                     <div className={HomepageCss.imgs}>
                         <Carousel autoplay>
@@ -186,40 +188,40 @@ export default class Homepage extends React.Component {
                         <Col span={3}></Col>
 
                         <Col span={4}>
-                        <h3>zhangmaolin</h3>
-                        <h3>123456789</h3>
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>                   
+                            <h3>zhangmaolin</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
                         <Col span={4}>
-                        <h3>zengzhuhong</h3>
-                        <h3>123456789</h3>
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>
+                            <h3>zengzhuhong</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>                   
-                        <h3>lilan</h3>
-                        <h3>123456789</h3>        
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>           
+                        <Col span={4}>
+                            <h3>lilan</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>                    
-                        <h3>wujiaxin</h3>
-                        <h3>123456789</h3>        
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>            
+                        <Col span={4}>
+                            <h3>wujiaxin</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>                    
-                        <h3>wangfei</h3>
-                        <h3>123456789</h3>        
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>           
+                        <Col span={4}>
+                            <h3>wangfei</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
                         <Col span={1}></Col>
-                        </Row>
-               
-               
-                </div> 
+                    </Row>
+
+
+                </div>
             </div>
         )
     }

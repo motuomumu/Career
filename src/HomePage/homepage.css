@@ -3,16 +3,22 @@
     height: 2000px;
     width: 100%;
 }
-.space{
+/* .space{
     background-color: rgba(12, 12, 12, 0.295);
     height: 20px;
     width: 100%;
-}
+    z-index: 3;
+    position:absolute;
+    margin-top: 50px;
+} */
 .basic{
-    background-color: rgba(12, 12, 12, 0.295);
+    /* background-color: rgba(12, 12, 12, 0.295); */
     height: 60px;
     width: 100%;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    z-index: 3;
+    position:absolute;
+    margin-top: 50px;
 }
 .input{
     background-color: #ca39399c;

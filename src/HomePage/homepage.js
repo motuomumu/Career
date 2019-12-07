@@ -160,15 +160,24 @@ export default class Homepage extends React.Component {
                     <Row>.
                         <Col span={2}></Col>
                         <Col span={6}>
-                            <div>
+
+
+                            <div className={HomepageCss.box}>
                                 <div className={HomepageCss.leader}>
                                 <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
                                 </div>
                                 
                                 <div className={HomepageCss.hide1}>
-                                    <Link to="/"><p>关爱老人<br/>从我做起</p></Link>
+                                    <Link to="/"><h2>关爱老人</h2><p>从我做起那就这样吧，
+                                    让爱豆开始的年少多金卡丁车出具的南师大宋丹丹卡瓦尼
+                                    的角度那双鞋的骄傲手机端考虑从美食城你的快乐对面是
+                                    错的借卡魔刹石的即可拉倒加快落实到</p></Link>
                                 </div>
                             </div>
+
+
+
+
                         </Col>
                         <Col span={1}></Col>
                         <Col span={6}>

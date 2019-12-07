@@ -25,9 +25,8 @@
     height: 500px;
     width: 100%;
     z-index: -999;
-    margin-top: -25px;
 }
-.img1{
+.img01{
     height: 500px;
     width: 100%;
     background-image: url(../Image/图1.jpg);
@@ -41,21 +40,21 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 60px;
 }
-.img2{
+.img02{
     height: 500px;
     width: 100%;
     background-image: url(../Image/养老院.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.img3{
+.img03{
     height: 500px;
     width: 100%;
     background-image: url(../Image/图2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.img4{
+.img04{
     height: 500px;
     width: 100%;
     background-image: url(../Image/孤儿院.jpg);
@@ -65,31 +64,32 @@
 .card{
     height: 650px;
     width: 100%;
+    margin-top: 50px;
 }
-
-.img2{
-    margin-top: 25px;
-    z-index: -1;
+.change1:hover{
+    opacity: 0.1;
+    z-index: 1;
 }
-.img3{
-    margin-top: 25px;
-    z-index: -1;
-}
-.picture{
-    z-index: -1;
-}
-.img1{
-    margin-top: 25px;
+.change1 :hover .hide1{
+    display: block;
+    opacity: 1;
 }
 .hide1{
-    background-color: rgba(0, 0, 0, 0.418);
-    display: none;
+    background-color: rgba(0, 0, 0, 0.562);
     height: 600px;
     width: 100%;
+    z-index: -1;
+    margin-top: -600px;
 }
-.picture:hover img{
-    display: block;
-   
+.hide1 p{
+    opacity: 0.2;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 50px;
+}
+.imgbox1{
+    height: 600px;
+    width: 380px;
 }
 
 

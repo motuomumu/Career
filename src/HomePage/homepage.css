@@ -24,23 +24,23 @@
     background-color: #ca39399c;
 }
 .introduce{
-    height: 510px;
+    height: 725px;
     width: 100%;
 }
 .imgs{
-    height: 500px;
+    height: 700px;
     width: 100%;
     z-index: -999;
 }
 .img01{
-    height: 500px;
+    height: 700px;
     width: 100%;
-    background-image: url(../Image/图1.jpg);
+    background-image: url(../Image/改11.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .write1{
-    margin-top: 70px;
+    margin-top: 170px;
 }
 .write1 p{
     font-family: 'Courier New', Courier, monospace;
@@ -49,21 +49,21 @@
 
 
 .img02{
-    height: 500px;
+    height: 700px;
     width: 100%;
-    background-image: url(../Image/养老院.jpg);
+    background-image: url(../Image/改2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .img03{
-    height: 500px;
+    height: 700px;
     width: 100%;
-    background-image: url(../Image/图2.jpg);
+    background-image: url(../Image/改3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .img04{
-    height: 500px;
+    height: 700px;
     width: 100%;
     background-image: url(../Image/孤儿院.jpg);
     background-repeat: no-repeat;

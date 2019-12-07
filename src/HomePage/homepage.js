@@ -6,7 +6,7 @@ import img2 from '../Image/孤儿院.jpg'
 import img3 from '../Image/福利院.jpg'
 import img4 from '../Image/图6.jpg'
 
-var HomepageCss = require("../Homepage/homepage.css")
+var HomepageCss = require("./homepage.css")
 
 const menu = (
     <Menu>
@@ -57,7 +57,17 @@ const menu1 = (
     </Menu>
 );
 
-
+const menu2 = (
+    <Menu>
+        <Menu.SubMenu title="注册">
+            <Menu.Item><Link to="/">机构</Link></Menu.Item>
+            <Menu.Item><Link to="/">志愿者</Link></Menu.Item>
+        </Menu.SubMenu>
+        <Menu.Item>
+            <Link to="/">登陆</Link>
+        </Menu.Item>
+    </Menu>
+);
 
 // const bgGround1 = {
 //     display: 'inline-block',
@@ -104,18 +114,11 @@ export default class Homepage extends React.Component {
                             />
                         </Col>
                         <Col span={2}>
-                            <Popconfirm
-                                title="需要跳转页面吗?"
-                                onConfirm={confirm}
-                                onCancel={cancel}
-                                okText="登陆 "
-                                cancelText="注册"
-
-                            >
-                                <Button type="link">
-                                    <Link to=""><Avatar icon="user" /></Link>
-                                </Button>
-                            </Popconfirm>
+                        <Dropdown overlay={menu2}>
+                                <Link className="ant-dropdown-link" trigger={['click']}>
+                                    <Avatar icon="user" size="large" />
+                                </Link>
+                            </Dropdown>
                         </Col>
                         <Col span={3}>
                             <Dropdown overlay={menu1}>

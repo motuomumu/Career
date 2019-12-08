@@ -5,6 +5,7 @@ import img1 from '../Image/养老院.jpg'
 import img2 from '../Image/孤儿院.jpg'
 import img3 from '../Image/福利院.jpg'
 import img4 from '../Image/图6.jpg'
+import china from '../Image/中国地图.png'
 
 var HomepageCss = require("./homepage.css")
 
@@ -114,7 +115,7 @@ export default class Homepage extends React.Component {
                             />
                         </Col>
                         <Col span={2}>
-                        <Dropdown overlay={menu2}>
+                            <Dropdown overlay={menu2}>
                                 <Link className="ant-dropdown-link" trigger={['click']}>
                                     <Avatar icon="user" size="large" />
                                 </Link>
@@ -127,7 +128,7 @@ export default class Homepage extends React.Component {
                         </Col>
                     </Row>
                 </div>
-               
+
                 <div className={HomepageCss.introduce}>
                     <div className={HomepageCss.imgs}>
                         <Carousel autoplay>
@@ -164,24 +165,27 @@ export default class Homepage extends React.Component {
 
                             <div className={HomepageCss.box}>
                                 <div className={HomepageCss.leader}>
-                                <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
+                                    <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
                                 </div>
-                                
                                 <div className={HomepageCss.hide1}>
-                                    <Link to="/"><h2>关爱老人</h2><p>从我做起那就这样吧，
-                                    让爱豆开始的年少多金卡丁车出具的南师大宋丹丹卡瓦尼
-                                    的角度那双鞋的骄傲手机端考虑从美食城你的快乐对面是
-                                    错的借卡魔刹石的即可拉倒加快落实到</p></Link>
+                                    <h2><strong>关爱老人</strong></h2>
+                                    <Row>
+                                        <Col span={2}></Col>
+                                        <Col span={20}>
+                                            <p>从我做起那就这样吧，
+                                            让爱豆开始的年少多金卡丁车出具的南师大宋丹丹卡瓦尼
+                                            的角度那双鞋的骄傲手机端考虑从美食城你的快乐对面是
+                                            错的借卡魔刹石的即可拉倒加快落实到</p>
+                                        </Col>
+                                        <Col span={2}></Col>
+                                    </Row>
+                                    <Button type="primary">报名</Button>
                                 </div>
                             </div>
-
-
-
-
                         </Col>
                         <Col span={1}></Col>
                         <Col span={6}>
-                        <div className={HomepageCss.imgbox1}>
+                            <div className={HomepageCss.imgbox1}>
                                 <Carousel autoplay>
                                     <div>
                                         <img src={img2} height={600} width={380}></img>
@@ -207,7 +211,43 @@ export default class Homepage extends React.Component {
                         <Col span={2}></Col>
                     </Row>
                 </div>
-                <div></div>
+
+                
+                <div className={HomepageCss.fly}>
+                    <img src={HomepageCss.pi}></img>
+                </div>
+
+                <div className={HomepageCss.map}>
+                    <Row>
+                        <Col span={1}></Col>
+                        <Col span={10}>
+                            <div className={HomepageCss.character}>
+                                <h1>在中国的角落寻找你的足迹</h1>
+                                <br/>
+                                <p>无论你从哪里来，又或者去向何方</p>
+                                <br/>
+                                <p>都请勇敢的向前一步</p>
+                                <br/>
+                                <p>善行图从世界各地为志愿者们寻找安全、有趣又充满挑战与价值的志愿者项目，
+                                    让你可以充分的体现自我的价值。
+                                </p>
+                                <br/>
+                                <p>加入我们，你将会接受世界爱的赠礼与自然真诚的回馈</p>
+                                <br/>
+
+                                <Button type="dashed">
+                                    <Link to="/login">
+                                        <p>加入我们</p>
+                                    </Link>
+                                </Button>
+                            </div>
+                        </Col>
+                        <Col span={11}>
+                            <img src={china} height={450} width={680} className={HomepageCss.china}></img>
+                        </Col>
+                        <Col span={2}></Col>
+                    </Row>
+                </div>
                 <div></div>
 
 

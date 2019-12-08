@@ -231,13 +231,13 @@ export default class Homepage extends React.Component {
                         </Col>
 
                         <Col span={4}>
-                            <h3>wujiaxin</h3>
+                            <h3>wangfei</h3>
                             <h3>123456789</h3>
                             <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
                         <Col span={4}>
-                            <h3>wangfei</h3>
+                            <h3>小可爱</h3>
                             <h3>123456789</h3>
                             <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>

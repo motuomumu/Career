@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row,Col,Icon,Layout,Carousel,Card} from 'antd'
+import {Row,Col,Icon,Layout,Carousel,Card,Menu,Dropdown,Button,message} from 'antd'
 
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -11,20 +11,52 @@ window.onload=function(){
     var info = document.getElementById("")
 }
 const {Meta} =Card;
+const menu = (
+    <Menu onClick={handleMenuClick}>
+      <Menu.Item key="1">
+        <Icon type="user" />
+        进入。。。
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Icon type="user" />
+        进入。。。
+      </Menu.Item>
+    </Menu>
+  );
+ 
+  function handleMenuClick(e) {
+    message.info('Click on menu item.');
+    console.log('click', e);
+  }
 export default class NewPage extends React.Component{
     render(){
         return(
             <div className={NewPageCss.page}>
                 <div className={NewPageCss.page1}>
                 <Layout>
-                    <Header></Header>
+                    <Header>
+                        <Row>
+                            <Col span={1}></Col>
+                            <Col span={20}><a href="/homepage">首页</a></Col>
+                            <Col span={1}>
+
+                            <div id="components-dropdown-demo-dropdown-button">
+                                <Dropdown overlay={menu}>
+                                <Button>
+                                    返回 <Icon type="down" />
+                                </Button>
+                                </Dropdown>
+                            </div>
+
+                            </Col>
+                        </Row>                 
+                    </Header>
                     <Content>
                         <Row>
-                        <Col span={4}>
+                        <Col span={3}>
                         
                         </Col>
                         <Col span={18}>
-                        <h1>展示</h1>
                         <h2>我们的善行</h2>
                         </Col>
                         <Col span={1}></Col>
@@ -34,7 +66,7 @@ export default class NewPage extends React.Component{
                         <Col span={2}></Col>
                         <Col span={1}>
                             <div className={NewPageCss.iconl}>
-                            <a id="prev" href=""><Icon type="left" style={{fontSize:'50px' }} /></a>
+                            <Icon  style={{fontSize:'50px' } } />
                             </div>
                         </Col>
                         <Col span={19}>
@@ -56,7 +88,7 @@ export default class NewPage extends React.Component{
                         </Col>
                         <Col span={1}>
                         <div className={NewPageCss.iconr}>
-                        <a id="prev" href=""><Icon type="right" style={{fontSize:'50px' }} /></a>
+                        <Icon  style={{fontSize:'50px' }} />
                             </div>
                         </Col>
                         </Row>

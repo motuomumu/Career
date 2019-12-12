@@ -7,6 +7,7 @@ import {BrowserRouter,Route,Switch,Redirect,Link} from 'react-router-dom';
 import LoginPage from './Login/login';
 import NewsPage from './News/news'
 import NewPage from './new/new';
+import OrganizationPage from './Organization/organization';
 
 class IndexPage extends React.Component{
     render(){
@@ -19,6 +20,7 @@ class IndexPage extends React.Component{
                         <Route path="/news" component={NewsPage}></Route>
                         <Route path='/homepage' component={Homepage}></Route>
                         <Route path="/new" component={NewPage}></Route>
+                        <Route path="/organization" component={OrganizationPage}></Route>
                     </Switch>
                 </BrowserRouter>
                

@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Homepage from './HomePage/homepage'
 import * as serviceWorker from './serviceWorker';
-
 import {BrowserRouter,Route,Switch,Redirect,Link} from 'react-router-dom';
 import LoginPage from './Login/login';
 import NewsPage from './News/news'
-import WaterfallPage from './Waterfall/waterfall';
 import NewPage from './new/new';
 import OrganizationPage from './Organization/organization';
 
@@ -21,7 +19,6 @@ class IndexPage extends React.Component{
                         <Route path="/login" component={LoginPage}></Route>
                         <Route path="/news" component={NewsPage}></Route>
                         <Route path='/homepage' component={Homepage}></Route>
-                        <Route path="/waterfall" component={WaterfallPage}></Route>
                         <Route path="/new" component={NewPage}></Route>
                         <Route path="/organization" component={OrganizationPage}></Route>
                     </Switch>

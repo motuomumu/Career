@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 import img1 from '../Image/养老院.jpg'
 import img2 from '../Image/孤儿院.jpg'
 import img3 from '../Image/福利院.jpg'
+import img4 from '../Image/图6.jpg'
+import china from '../Image/中国地图.png'
 
-var HomepageCss = require("../HomePage/homepage.css")
+var HomepageCss = require("./homepage.css")
 
 const menu = (
     <Menu>
@@ -56,6 +58,17 @@ const menu1 = (
     </Menu>
 );
 
+const menu2 = (
+    <Menu>
+        <Menu.SubMenu title="注册">
+            <Menu.Item><Link to="/">机构</Link></Menu.Item>
+            <Menu.Item><Link to="/">志愿者</Link></Menu.Item>
+        </Menu.SubMenu>
+        <Menu.Item>
+            <Link to="/">登陆</Link>
+        </Menu.Item>
+    </Menu>
+);
 
 // const bgGround1 = {
 //     display: 'inline-block',
@@ -102,17 +115,11 @@ export default class Homepage extends React.Component {
                             />
                         </Col>
                         <Col span={2}>
-                            <Popconfirm
-                                title="需要跳转页面吗?"
-                                onConfirm={confirm}
-                                onCancel={cancel}
-                                okText="登陆"
-                                cancelText="注册"
-                            >
-                                <Button type="link">
-                                    <Link to=""><Avatar icon="user" /></Link>
-                                </Button>
-                            </Popconfirm>
+                            <Dropdown overlay={menu2}>
+                                <Link className="ant-dropdown-link" trigger={['click']}>
+                                    <Avatar icon="user" size="large" />
+                                </Link>
+                            </Dropdown>
                         </Col>
                         <Col span={3}>
                             <Dropdown overlay={menu1}>
@@ -121,10 +128,11 @@ export default class Homepage extends React.Component {
                         </Col>
                     </Row>
                 </div>
+
                 <div className={HomepageCss.introduce}>
                     <div className={HomepageCss.imgs}>
                         <Carousel autoplay>
-                            <div className={HomepageCss.img1}>
+                            <div className={HomepageCss.img01}>
                                 <div className={HomepageCss.write1}>
                                     <Row>
                                         <Col span={2}></Col>
@@ -138,46 +146,108 @@ export default class Homepage extends React.Component {
                                 </div>
                             </div>
                             <div>
-                                <div className={HomepageCss.img2}></div>
+                                <div className={HomepageCss.img02}></div>
                             </div>
                             <div>
-                                <div className={HomepageCss.img3}></div>
+                                <div className={HomepageCss.img03}></div>
                             </div>
                             <div>
-                                <div className={HomepageCss.img4}></div>
+                                <div className={HomepageCss.img04}></div>
                             </div>
                         </Carousel>
                     </div>
                 </div>
                 <div className={HomepageCss.card}>
-                    <Row>
+                    <Row>.
                         <Col span={2}></Col>
                         <Col span={6}>
-                            <div className={HomepageCss.img1}>
+
+
+                            <div className={HomepageCss.box}>
+                                <div className={HomepageCss.leader}>
+                                    <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
+                                </div>
                                 <div className={HomepageCss.hide1}>
-                                    shuiasdhia
-                                </div>
-                                <div className={HomepageCss.picture}>
-                                    <img src={img1} height={600} width={380}></img>
+                                    <h2><strong>关爱老人</strong></h2>
+                                    <Row>
+                                        <Col span={2}></Col>
+                                        <Col span={20}>
+                                            <p>从我做起那就这样吧，
+                                            让爱豆开始的年少多金卡丁车出具的南师大宋丹丹卡瓦尼
+                                            的角度那双鞋的骄傲手机端考虑从美食城你的快乐对面是
+                                            错的借卡魔刹石的即可拉倒加快落实到</p>
+                                        </Col>
+                                        <Col span={2}></Col>
+                                    </Row>
+                                    <Button type="primary">报名</Button>
                                 </div>
                             </div>
                         </Col>
                         <Col span={1}></Col>
                         <Col span={6}>
-                            <div className={HomepageCss.img1}>
-                                <img src={img2} height={600} width={380} className={HomepageCss.picture}></img>
+                            <div className={HomepageCss.imgbox1}>
+                                <Carousel autoplay>
+                                    <div>
+                                        <img src={img2} height={600} width={380}></img>
+                                    </div>
+                                    <div>
+                                        <img src={img1} height={600} width={380}></img>
+                                    </div>
+                                    <div>
+                                        <img src={img4} height={600} width={380}></img>
+                                    </div>
+                                    <div>
+                                        <h3>4</h3>
+                                    </div>
+                                </Carousel>
                             </div>
                         </Col>
                         <Col span={1}></Col>
                         <Col span={6}>
-                            <div className={HomepageCss.img1}>
+                            <div className={HomepageCss.imgbox1}>
                                 <img src={img3} height={600} width={380}></img>
                             </div>
                         </Col>
                         <Col span={2}></Col>
                     </Row>
                 </div>
-                <div></div>
+
+                
+                <div className={HomepageCss.fly}>
+                    <img src={HomepageCss.pi}></img>
+                </div>
+
+                <div className={HomepageCss.map}>
+                    <Row>
+                        <Col span={1}></Col>
+                        <Col span={10}>
+                            <div className={HomepageCss.character}>
+                                <h1>在中国的角落寻找你的足迹</h1>
+                                <br/>
+                                <p>无论你从哪里来，又或者去向何方</p>
+                                <br/>
+                                <p>都请勇敢的向前一步</p>
+                                <br/>
+                                <p>善行图从世界各地为志愿者们寻找安全、有趣又充满挑战与价值的志愿者项目，
+                                    让你可以充分的体现自我的价值。
+                                </p>
+                                <br/>
+                                <p>加入我们，你将会接受世界爱的赠礼与自然真诚的回馈</p>
+                                <br/>
+
+                                <Button type="dashed">
+                                    <Link to="/login">
+                                        <p>加入我们</p>
+                                    </Link>
+                                </Button>
+                            </div>
+                        </Col>
+                        <Col span={11}>
+                            <img src={china} height={450} width={680} className={HomepageCss.china}></img>
+                        </Col>
+                        <Col span={2}></Col>
+                    </Row>
+                </div>
                 <div></div>
 
 
@@ -186,40 +256,40 @@ export default class Homepage extends React.Component {
                         <Col span={3}></Col>
 
                         <Col span={4}>
-                        <h3>zhangmaolin</h3>
-                        <h3>123456789</h3>
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>                   
+                            <h3>zhangmaolin</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
                         <Col span={4}>
-                        <h3>zengzhuhong</h3>
-                        <h3>123456789</h3>
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>
+                            <h3>zengzhuhong</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>                   
-                        <h3>lilan</h3>
-                        <h3>123456789</h3>        
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>           
+                        <Col span={4}>
+                            <h3>lilan</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>                    
-                        <h3>wujiaxin</h3>
-                        <h3>123456789</h3>        
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>            
+                        <Col span={4}>
+                            <h3>wujiaxin</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>                    
-                        <h3>wangfei</h3>
-                        <h3>123456789</h3>        
-                        <img src="/erweima.jpg" width={'60'} height={'60'}></img>           
+                        <Col span={4}>
+                            <h3>wangfei</h3>
+                            <h3>123456789</h3>
+                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
                         <Col span={1}></Col>
-                        </Row>
-               
-               
-                </div> 
+                    </Row>
+
+
+                </div>
             </div>
         )
     }

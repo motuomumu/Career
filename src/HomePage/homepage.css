@@ -20,6 +20,9 @@
     position:absolute;
     margin-top: 30px;
 }
+.basic Button{
+   color: white;
+}
 .input{
     background-color: #ca39399c;
 }
@@ -33,7 +36,7 @@
     z-index: -999;
 }
 .img01{
-    height: 700px;
+    height: 580px;
     width: 100%;
     background-image: url(../Image/改11.png);
     background-repeat: no-repeat;
@@ -49,21 +52,21 @@
 
 
 .img02{
-    height: 700px;
+    height: 580px;
     width: 100%;
     background-image: url(../Image/改2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .img03{
-    height: 700px;
+    height: 580px;
     width: 100%;
     background-image: url(../Image/改3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .img04{
-    height: 700px;
+    height: 580px;
     width: 100%;
     background-image: url(../Image/孤儿院.jpg);
     background-repeat: no-repeat;
@@ -72,7 +75,7 @@
 .card{
     height: 650px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .change1:hover{
     opacity: 0.1;
@@ -140,7 +143,6 @@
 }
 .box .change1{
     position: absolute;
-    
 }
 .box .change1 img{
     position: absolute;

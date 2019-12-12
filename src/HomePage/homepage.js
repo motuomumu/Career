@@ -161,8 +161,6 @@ export default class Homepage extends React.Component {
                     <Row>.
                         <Col span={2}></Col>
                         <Col span={6}>
-
-
                             <div className={HomepageCss.box}>
                                 <div className={HomepageCss.leader}>
                                     <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>

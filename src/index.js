@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Homepage from './HomePage/homepage'
+import Homepage from './Homepage/homepage'
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter,Route,Switch,Redirect,Link} from 'react-router-dom';
 import LoginPage from './Login/login';

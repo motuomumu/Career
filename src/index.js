@@ -9,6 +9,7 @@ import LoginPage from './Login/login';
 import NewsPage from './News/news'
 import WaterfallPage from './Waterfall/waterfall';
 import NewPage from './new/new';
+import OrganizationPage from './Organization/organization';
 
 class IndexPage extends React.Component{
     render(){
@@ -22,6 +23,7 @@ class IndexPage extends React.Component{
                         <Route path='/homepage' component={Homepage}></Route>
                         <Route path="/waterfall" component={WaterfallPage}></Route>
                         <Route path="/new" component={NewPage}></Route>
+                        <Route path="/organization" component={OrganizationPage}></Route>
                     </Switch>
                 </BrowserRouter>
                

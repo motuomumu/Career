@@ -14,7 +14,19 @@ export default class OrganizationPage extends React.Component{
         return(
             <div className={OrganizationPageCss.header}>
                  <Layout >
-                    <Header ></Header>
+                    <Header >
+                      <Row>
+                        <Col span={3}></Col>
+                        <Col span={10}></Col>
+                        <Col span={5}></Col>
+                        <Col span={3}>
+                          <div className={OrganizationPageCss.pl}>
+                            <a href='../../personal' > 个人中心</a>
+                          
+                          </div>
+                        </Col>
+                      </Row>
+                    </Header>
                     <div className={OrganizationPageCss.bg1} ><img src="/v2.jpg" ></img></div>
                     <Content>
                     

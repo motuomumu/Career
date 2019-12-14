@@ -8,6 +8,8 @@ import LoginPage from './Login/login';
 import NewsPage from './News/news'
 import NewPage from './new/new';
 import OrganizationPage from './Organization/organization';
+import PersonalPage from './Personal/personal';
+import CenterPage from './Center/center';
 
 class IndexPage extends React.Component{
     render(){
@@ -21,6 +23,8 @@ class IndexPage extends React.Component{
                         <Route path='/homepage' component={Homepage}></Route>
                         <Route path="/new" component={NewPage}></Route>
                         <Route path="/organization" component={OrganizationPage}></Route>
+                        <Route path="/personal" component={PersonalPage}></Route>
+                        <Route path="/center" component={CenterPage}></Route>
                     </Switch>
                 </BrowserRouter>
                

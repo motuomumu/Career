@@ -1,0 +1,13 @@
+.bg1{
+    position: absolute;
+    z-index: -99;
+    height: 1500px;
+    width: 100%;
+}
+.v2{
+    height: 100px;
+    width: 1520px;
+}
+.user{
+    padding: 30px;
+}

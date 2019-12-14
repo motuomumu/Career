@@ -1,0 +1,24 @@
+.background{
+    height: 747px;
+    width: 100%;
+    z-index: -99;
+    position: absolute;
+}
+
+.volunteer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 120px;
+}
+.q{
+    font-size: 30px;
+}
+.pl{
+    font-size: 60px;
+}
+.wl{
+    font-size: 68px;
+    color: coral;
+    align-content: center;
+}
+.panda{margin-right: 6px;
+}

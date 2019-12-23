@@ -163,8 +163,7 @@ export default class Homepage extends React.Component {
                         </Col>
                         <div>
                             <span>{currentTime}</span>
-                            {/* <img src={dayPictureUrl} alt="weather"></img>
-                            <span>{weather}</span> */}
+                           
                         </div>
                     </Row>
                 </div>

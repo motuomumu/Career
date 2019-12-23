@@ -6,6 +6,8 @@ import img2 from '../Image/孤儿院.jpg'
 import img3 from '../Image/福利院.jpg'
 import img4 from '../Image/图6.jpg'
 import china from '../Image/中国地图.png'
+import { formateDate } from './dataUtils'
+import {reqWeather} from '../api'
 
 var HomepageCss = require("./homepage.css")
 
@@ -91,7 +93,40 @@ const menu2 = (
 
 export default class Homepage extends React.Component {
 
+    state = {
+        currentTime: formateDate(Date.now()),//当前时间的字符串
+        // dayPictureUrl: '',
+        // weather: '',
+    }
+    getTime=()=>{
+        //每隔一秒获取当前时间，并更新当前时间数据currentTime
+        setInterval(()=>{
+            const currentTime=formateDate(Date.now())
+            this.setState({currentTime})
+        },1000)
+    }
+    // getWeather= async ()=>{
+    //     //调用接口请求异步获取数据
+    //     const {dayPictureUrl,weather}=await reqWeather('北京')
+    //     //更新状态
+    //     this.setState({dayPictureUrl,weather})
+    // }
+    /*
+    获取每秒的时间
+    第一次render后执行一次
+    执行异步操作：发送ajax请求，启动定时器
+    */
+    componentDidMount(){
+        //获取当前时间
+        this.getTime()
+        //获取当前天气
+        // this.getWeather()
+    }
+    
+
     render() {
+
+        const { currentTime, dayPictureUrl, weather } = this.state
         return (
             <div className={HomepageCss.all}>
                 <div className={HomepageCss.space}></div>
@@ -126,6 +161,11 @@ export default class Homepage extends React.Component {
                                 <Button type="ghost">了解我们</Button>
                             </Dropdown>
                         </Col>
+                        <div>
+                            <span>{currentTime}</span>
+                            {/* <img src={dayPictureUrl} alt="weather"></img>
+                            <span>{weather}</span> */}
+                        </div>
                     </Row>
                 </div>
 
@@ -210,7 +250,7 @@ export default class Homepage extends React.Component {
                     </Row>
                 </div>
 
-                
+
                 <div className={HomepageCss.fly}>
                     <img src={HomepageCss.pi}></img>
                 </div>
@@ -221,17 +261,17 @@ export default class Homepage extends React.Component {
                         <Col span={10}>
                             <div className={HomepageCss.character}>
                                 <h1>在中国的角落寻找你的足迹</h1>
-                                <br/>
+                                <br />
                                 <p>无论你从哪里来，又或者去向何方</p>
-                                <br/>
+                                <br />
                                 <p>都请勇敢的向前一步</p>
-                                <br/>
+                                <br />
                                 <p>善行图从世界各地为志愿者们寻找安全、有趣又充满挑战与价值的志愿者项目，
                                     让你可以充分的体现自我的价值。
                                 </p>
-                                <br/>
+                                <br />
                                 <p>加入我们，你将会接受世界爱的赠礼与自然真诚的回馈</p>
-                                <br/>
+                                <br />
 
                                 <Button type="dashed">
                                     <Link to="/login">

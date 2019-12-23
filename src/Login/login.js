@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button, Checkbox, Row, Col,} from 'antd';
+import {Link} from 'react-router-dom'
 import './login.css'
 import 'antd/dist/antd.css'
 // import {reqLogin}from '../../api'
@@ -7,38 +8,67 @@ import 'antd/dist/antd.css'
 var LoginCss = require('./login.css')    
 class Login extends Component {
 
-    // handleSubmit = (event) => {
-    //     //阻止事件的默认行为
-    //     event.preventDefault()
-    //     //对所有表单字段进行检验 最后一次总的验证
-    //     this.props.form.validateFields((error,values) =>
-    //         {
-    //             if (!error) {
-    //                 // console.log('提交登录的ajax请求',values);
-    //                 const {account,password}=values
-    //                 reqLogin().then(response => {
-    //                     console.log('成功了',response.data)
-    //                 }).catch(error => {
-    //                     console.log('失败了',error)
-    //                 })
-    //             }else{
-    //                 console.log('校验失败')
-    //             }
-    //         });
-    //     //得到form表单对象
-    //     const form = this.props.form
-    //     //获取表单项的输入数据
-    //     const values = form.getFieldsvalue
-    //     console.log('handleSubmit()', values)
-    //     //对密码进行自定义验证
-    // }
+
     render() {
         //const form = this.props.form;
         const { getFieldDecorator } = this.props.form;
 
         return (
             <div className={LoginCss.login}>
-                <header className={LoginCss.header}></header>
+                <header className={LoginCss.header}>
+                    <Row>
+                        <Col span={2}></Col>
+                        <Col span={8}></Col>
+                        <div>  
+                        <Col span={2}>
+                            <div className={LoginCss.header1}>
+                                <Link to="/homepage">首页</Link>                                
+                            </div>                           
+                        </Col>
+                        <Col span={1}>
+                            <div className={LoginCss.header1}>
+                            <span> | </span>
+                            </div>                        
+                        </Col>
+                        <Col span={2}>
+                            <div className={LoginCss.header1}>
+                                <Link to="/personal">个人中心</Link>
+                            </div>
+                        </Col>
+                        <Col span={1}>
+                        <div className={LoginCss.header1}>
+                            <span> | </span>
+                            </div> 
+                        </Col>
+                        <Col span={2}>
+                            <div className={LoginCss.header1}>
+                                <Link to="/organization">公益组织</Link>
+                            </div>
+                        </Col>
+                        <Col span={1}>
+                        <div className={LoginCss.header1}>
+                            <span> | </span>
+                            </div> 
+                        </Col>
+                        <Col span={2}>
+                            <div className={LoginCss.header1}>
+                                <Link to="/news">新闻</Link>
+                            </div>
+                        </Col>
+                        <Col span={1}>
+                        <div className={LoginCss.header1}>
+                            <span> | </span>
+                            </div> 
+                        </Col>
+                        <Col span={2}>
+                            <div >
+                                <Button>注册</Button>
+                            </div>
+                        </Col>
+                        </div>
+                    </Row>
+
+                </header>
                 <section className={LoginCss.content}>
                     <h2>用户登录</h2>
                     <Form onSubmit={this.handleSubmit} className={LoginCss.form}>

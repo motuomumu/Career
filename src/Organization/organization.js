@@ -105,8 +105,6 @@ var OrganizationPageCss = require('./organization.css')
                     </SubMenu>
                   </Menu>
                 </div>
-
-
               </Col>
 
               <Col span={6}>

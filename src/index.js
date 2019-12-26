@@ -11,6 +11,7 @@ import EditorConvertToHTML from './Pages/RichText'
 import OrganizationPage from './Organization/organization';
 import PersonalPage from './Personal/personal';
 import CenterPage from './Center/center';
+import Register from './Register/register'
 
 class IndexPage extends React.Component{
     render(){
@@ -27,6 +28,7 @@ class IndexPage extends React.Component{
                         <Route path="/organization" component={OrganizationPage}></Route>
                         <Route path="/personal" component={PersonalPage}></Route>
                         <Route path="/center" component={CenterPage}></Route>
+                        <Route path="/register" component={Register}></Route>
                     </Switch>
                 </BrowserRouter>
                

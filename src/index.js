@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Homepage from './Homepage/homepage'
+import Homepage from './HomePage/homepage'
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter,Route,Switch,Redirect,Link} from 'react-router-dom';
 import LoginPage from './Login/login';
@@ -11,6 +11,7 @@ import EditorConvertToHTML from './Pages/RichText'
 import OrganizationPage from './Organization/organization';
 import PersonalPage from './Personal/personal';
 import CenterPage from './Center/center';
+import Details from './Details/details';
 
 class IndexPage extends React.Component{
     render(){
@@ -27,6 +28,8 @@ class IndexPage extends React.Component{
                         <Route path="/organization" component={OrganizationPage}></Route>
                         <Route path="/personal" component={PersonalPage}></Route>
                         <Route path="/center" component={CenterPage}></Route>
+                        <Route path="/details" component={Details}></Route>
+                       
                     </Switch>
                 </BrowserRouter>
                

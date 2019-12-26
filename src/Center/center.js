@@ -1,7 +1,5 @@
 import React from 'react'
-import {Row,PageHeader,Card,Avatar,Col,Upload, Icon, message} from 'antd'
-
-
+import {Row,PageHeader,Card,Avatar,Col,Upload, Icon, message,Tabs} from 'antd'
 
 
 function getBase64(img, callback) {
@@ -21,9 +19,11 @@ function getBase64(img, callback) {
     }
     return isJpgOrPng && isLt2M;
   }
-  
-  
-const{Meta} =Card;
+  function callback(key){
+    console.log(key);
+  }
+const {TabPane} = Tabs; 
+const {Meta} =Card;
 var CenterPageCss = require('./center.css')
 export default class CenterPage extends React.Component{
     state = {
@@ -91,26 +91,28 @@ export default class CenterPage extends React.Component{
                           </Card>
                         </Col>
                         <Col span={4}>
-                            <Card style={{width:120}}>
+                            <Card hoverable style={{width:120}} >
                                 个人资料
                             </Card>
                         </Col>
                         <Col span={4}>
-                            <Card style={{width:120}}>
+                            <Card style={{width:120}} hoverable>
                                 我的动态
                             </Card>
                         </Col>
                         <Col span={4}>
-                            <Card style={{width:120}}>
+                            <Card style={{width:120}} hoverable>
                                 我的组织
                             </Card>
                         </Col>
                         <Col span={4}>
-                            <Card style={{width:120}}>
+                            <Card style={{width:120}} hoverable>
                                 修改密码
                             </Card>
                         </Col>
+                        
                    </Row>
+
                    </div>
                    
                 </div>

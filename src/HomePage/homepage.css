@@ -1,5 +1,5 @@
 .all{
-    background-color: rgb(232, 235, 228);
+    background-color: rgb(250, 250, 250);
     height: 2800px;
     width: 100%;
 }
@@ -106,7 +106,7 @@
 .map{
     height: 600px;
     width: 100%;
-    background-color: violet;
+    background-color: rgb(251, 255, 255);
 }
 .fly{
     z-index: 1;

@@ -12,6 +12,7 @@ import OrganizationPage from './Organization/organization';
 import PersonalPage from './Personal/personal';
 import CenterPage from './Center/center';
 import Details from './Details/details';
+import Register from './Register/register'
 
 class IndexPage extends React.Component{
     render(){
@@ -30,6 +31,7 @@ class IndexPage extends React.Component{
                         <Route path="/center" component={CenterPage}></Route>
                         <Route path="/details" component={Details}></Route>
                        
+                        <Route path="/register" component={Register}></Route>
                     </Switch>
                 </BrowserRouter>
                

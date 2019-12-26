@@ -63,8 +63,8 @@ const menu1 = (
 const menu2 = (
     <Menu>
         <Menu.SubMenu title="注册">
-            <Menu.Item><Link to="/">机构</Link></Menu.Item>
-            <Menu.Item><Link to="/">志愿者</Link></Menu.Item>
+            <Menu.Item><Link to="/register">机构</Link></Menu.Item>
+            <Menu.Item><Link to="/register">志愿者</Link></Menu.Item>
         </Menu.SubMenu>
         <Menu.Item>
             <Link to="/">登陆</Link>

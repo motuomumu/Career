@@ -1,6 +1,6 @@
 .bg1{
     position: absolute;
-    z-index: -99;
+    z-index: -1;
     height: 1500px;
     width: 100%;
 }
@@ -10,4 +10,18 @@
 }
 .user{
     padding: 30px;
+    height: 700px;
+    width: 100%;
+}
+.Card{
+    width: 200px;
+    height: 80px;
+    float: left;
+    margin: 50px;
+
+}
+.set{
+    height: 500px;
+    width: 100%;
+    text-align: center;
 }

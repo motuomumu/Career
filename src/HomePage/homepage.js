@@ -1,10 +1,12 @@
 import React from 'react'
 import { Row, Col, Icon, Menu, Dropdown, Input, Avatar, Button, Popconfirm, message, Carousel } from 'antd'
 import { Link } from 'react-router-dom'
-import img1 from '../Image/养老院.jpg'
-import img2 from '../Image/孤儿院.jpg'
-import img3 from '../Image/福利院.jpg'
-import img4 from '../Image/图6.jpg'
+import img1 from '../Image/img1.jpg'
+import img2 from '../Image/img2.jpg'
+import img3 from '../Image/img3.jpg'
+import img4 from '../Image/img4.jpg'
+import img5 from '../Image/img5.jpg'
+import img6 from '../Image/img6.jpg'
 import china from '../Image/中国地图.png'
 import { formateDate } from './dataUtils'
 import {reqWeather} from '../api'
@@ -205,14 +207,12 @@ export default class Homepage extends React.Component {
                                     <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
                                 </div>
                                 <div className={HomepageCss.hide1}>
-                                    <h2><strong>关爱老人</strong></h2>
+                                    <h2><strong>关爱儿童</strong></h2>
                                     <Row>
                                         <Col span={2}></Col>
                                         <Col span={20}>
-                                            <p>从我做起那就这样吧，
-                                            让爱豆开始的年少多金卡丁车出具的南师大宋丹丹卡瓦尼
-                                            的角度那双鞋的骄傲手机端考虑从美食城你的快乐对面是
-                                            错的借卡魔刹石的即可拉倒加快落实到</p>
+                                            <p>平凡如我，独守着残缺的孤傲，在高耸的山崖吹风。像一只翅膀受伤的鹰，渴望翱翔</p>
+                                            <p>你笑着站在那里，不卑不亢，以至于路过你的人，也都纷纷微笑起来。你会活得很好，就像一场春雪后，也像一阵夏雨诗</p>
                                         </Col>
                                         <Col span={2}></Col>
                                     </Row>
@@ -228,13 +228,13 @@ export default class Homepage extends React.Component {
                                         <img src={img2} height={600} width={380}></img>
                                     </div>
                                     <div>
-                                        <img src={img1} height={600} width={380}></img>
+                                        <img src={img3} height={600} width={380}></img>
                                     </div>
                                     <div>
                                         <img src={img4} height={600} width={380}></img>
                                     </div>
                                     <div>
-                                        <h3>4</h3>
+                                        <img src={img5} height={600} width={380}></img>
                                     </div>
                                 </Carousel>
                             </div>
@@ -242,7 +242,7 @@ export default class Homepage extends React.Component {
                         <Col span={1}></Col>
                         <Col span={6}>
                             <div className={HomepageCss.imgbox1}>
-                                <img src={img3} height={600} width={380}></img>
+                                <img src={img6} height={600} width={380}></img>
                             </div>
                         </Col>
                         <Col span={2}></Col>

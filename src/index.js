@@ -14,6 +14,8 @@ import CenterPage from './Center/center';
 import Details from './Details/details';
 import Register from './Register/register'
 
+
+
 class IndexPage extends React.Component{
     render(){
         return(
@@ -32,6 +34,8 @@ class IndexPage extends React.Component{
                         <Route path="/details" component={Details}></Route>
                        
                         <Route path="/register" component={Register}></Route>
+                       
+                
                     </Switch>
                 </BrowserRouter>
                

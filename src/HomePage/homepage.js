@@ -9,7 +9,7 @@ import img5 from '../Image/img5.jpg'
 import img6 from '../Image/img6.jpg'
 import china from '../Image/中国地图.png'
 import { formateDate } from './dataUtils'
-import {reqWeather} from '../api'
+import { reqWeather } from '../api'
 
 var HomepageCss = require("./homepage.css")
 
@@ -100,12 +100,12 @@ export default class Homepage extends React.Component {
         // dayPictureUrl: '',
         // weather: '',
     }
-    getTime=()=>{
+    getTime = () => {
         //每隔一秒获取当前时间，并更新当前时间数据currentTime
-        setInterval(()=>{
-            const currentTime=formateDate(Date.now())
-            this.setState({currentTime})
-        },1000)
+        setInterval(() => {
+            const currentTime = formateDate(Date.now())
+            this.setState({ currentTime })
+        }, 1000)
     }
     // getWeather= async ()=>{
     //     //调用接口请求异步获取数据
@@ -118,13 +118,13 @@ export default class Homepage extends React.Component {
     第一次render后执行一次
     执行异步操作：发送ajax请求，启动定时器
     */
-    componentDidMount(){
+    componentDidMount() {
         //获取当前时间
         this.getTime()
         //获取当前天气
         // this.getWeather()
     }
-    
+
 
     render() {
 
@@ -163,10 +163,6 @@ export default class Homepage extends React.Component {
                                 <Button type="ghost">了解我们</Button>
                             </Dropdown>
                         </Col>
-                        <div>
-                            <span>{currentTime}</span>
-                           
-                        </div>
                     </Row>
                 </div>
 
@@ -177,7 +173,12 @@ export default class Homepage extends React.Component {
                                 <div className={HomepageCss.write1}>
                                     <Row>
                                         <Col span={2}></Col>
-                                        <Col span={6}></Col>
+                                        <Col span={6}>
+                                            <div className={HomepageCss.timebox}>
+                                                <div className={HomepageCss.timemove}></div>
+                                                {currentTime}
+                                            </div>
+                                        </Col>
                                         <Col span={8}></Col>
                                         <Col span={8}>
                                             <p><strong>Volunteers</strong></p>

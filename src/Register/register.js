@@ -1,13 +1,5 @@
 import React, { Component } from 'react'
-import {
-  Form,
-  Input,
-  Cascader,
-  Select,
-  Button,
-  AutoComplete,
-  Radio,
-} from 'antd';
+import { Form, Input, Cascader, Select, Button, AutoComplete, Radio, Row, Col} from 'antd';
 import { reqRegister } from '../api'
 const { Option } = Select;
 const AutoCompleteOption = AutoComplete.Option;
@@ -24,7 +16,25 @@ const residences = [
             value: '金堂',
             label: '金堂',
           },
+          {
+            value: '双流',
+            label: '双流',
+          },
+          {
+            value: '简阳',
+            label: '简阳',
+          },
         ],
+      },
+      {
+        value: '自贡',
+        label: '自贡',
+        children: [
+          {
+            value: '自流井区',
+            label: '自流井区',
+          },
+        ]
       },
     ],
   },
@@ -48,17 +58,17 @@ const residences = [
 var RegisterCss = require("./register.css")
 class Register extends React.Component {
   state = {
-    username:'',
-    password:'',
-    confirm:'',
-    label:'',
-    type:'',
-    
-    residence:'',
+    username: '',
+    password: '',
+    confirm: '',
+    label: '',
+    type: '',
+
+    residence: '',
     confirmDirty: false,
     autoCompleteResult: [],
   };
-  register=()=>{
+  register = () => {
     console.log(this.state)
   }
   handleSubmit = e => {
@@ -70,8 +80,8 @@ class Register extends React.Component {
         reqRegister().then(response => {
           console.log('success', response.data)
         }).catch(error => {
-           console.log('fail', error)
-          
+          console.log('fail', error)
+
         })
       } else {
         console.log('失败')
@@ -102,14 +112,14 @@ class Register extends React.Component {
     }
     callback();
   };
-  handleChange=(name,val)=>{
+  handleChange = (name, val) => {
     this.setState({
-      [name]:val
+      [name]: val
     })
   }
   render() {
-    const{type}=this.state
-    const{label}=this.state
+    const { type } = this.state
+    const { label } = this.state
     const { getFieldDecorator } = this.props.form;
     const { autoCompleteResult } = this.state;
     const formItemLayout = {
@@ -135,80 +145,84 @@ class Register extends React.Component {
       },
     };
     return (
-      <Form {...formItemLayout} onSubmit={this.handleSubmit} className="form">
-        <h2>用户注册</h2>
-        <Form.Item label="用户名" onChange={val=>{this.handleChange('account',val)}}>
-          {getFieldDecorator('account', {
-            rules: [
-              {
-                type: 'contant',
-                message: '您输入的账户无效!',
-              },
-              {
-                required: true,
-                message: '请输入你的用户名!',
-              },
-            ],
-          })(<Input />)}
-        </Form.Item>
-        <Form.Item label="密码"   onChange={val=>{this.handleChange('password',val)}} hasFeedback>
-          {getFieldDecorator('password', {
-            rules: [
-              {
-                required: true,
-                message: '请输入你的密码!',
-              },
-              {
-                min: 4, message: '密码至少4位'
-              },
-              {
-                max: 12, message: '密码至多12位'
-              },
-              {
-                pattern: /^[a-zA-Z0-9]+$/, message: '密码必须是数字或英文组成'
-              },
-              {
-                validator: this.validateToNextPassword,
-              },
-            ],
-          })(<Input.Password />)}
-        </Form.Item>
-        <Form.Item label="确认密码"  hasFeedback onChange={val=>{this.handleChange('confirm',val)}}>
-          {getFieldDecorator('confirm', {
-            rules: [
-              {
-                required: true,
-                message: '请确认你的密码!',
-              },
-              {
-                validator: this.compareToFirstPassword,
-              },
-            ],
-          })(<Input.Password onBlur={this.handleConfirmBlur} />)}
-        </Form.Item>
+      <div className={RegisterCss.all}>
+        <Form {...formItemLayout} onSubmit={this.handleSubmit} className={RegisterCss.form}>
+            <h2>用户注册</h2>
+                <Form.Item label="用户名" onChange={val => { this.handleChange('account', val) }}>
+                  {getFieldDecorator('account', {
+                    rules: [
+                      {
+                        type: 'contant',
+                        message: '您输入的账户无效!',
+                      },
+                      {
+                        required: true,
+                        message: '请输入你的用户名!',
+                      },
+                    ],
+                  })(<Input />)}
+                </Form.Item>
 
-        <Form.Item label="所在地" onChange={val=>{this.handleChange('residence',val)}}>
-          {getFieldDecorator('residence', {
-            initialValue: ['四川', '成都', '隆昌'],
-            rules: [
-              { type: 'array', required: true, message: '请选择你的所在地!' },
-            ],
-          })(<Cascader options={residences} />)}
-        </Form.Item>
-        <Form.Item label="用户类型" >
-        <Radio.Group name="radiogroup" >
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Radio value={1} checked={type==='student'} onChange={()=>this.handleChange('type','student')}>学生</Radio>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Radio value={2} checked={type==='teacher'} onChange={()=>this.handleChange('type','teacher')}>老师</Radio>
-          </Radio.Group>
-        </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit" onClick={this.register}>
-            注&nbsp;&nbsp;&nbsp;册
+          <Form.Item label="密码" onChange={val => { this.handleChange('password', val) }} hasFeedback>
+            {getFieldDecorator('password', {
+              rules: [
+                {
+                  required: true,
+                  message: '请输入你的密码!',
+                },
+                {
+                  min: 4, message: '密码至少4位'
+                },
+                {
+                  max: 12, message: '密码至多12位'
+                },
+                {
+                  pattern: /^[a-zA-Z0-9]+$/, message: '密码必须是数字或英文组成'
+                },
+                {
+                  validator: this.validateToNextPassword,
+                },
+              ],
+            })(<Input.Password />)}
+          </Form.Item>
+          <Form.Item label="确认密码" hasFeedback onChange={val => { this.handleChange('confirm', val) }}>
+            {getFieldDecorator('confirm', {
+              rules: [
+                {
+                  required: true,
+                  message: '请确认你的密码!',
+                },
+                {
+                  validator: this.compareToFirstPassword,
+                },
+              ],
+            })(<Input.Password onBlur={this.handleConfirmBlur} />)}
+          </Form.Item>
+
+          <Form.Item label="所在地" onChange={val => { this.handleChange('residence', val) }}>
+            {getFieldDecorator('residence', {
+              initialValue: ['四川', '成都', '隆昌'],
+              rules: [
+                { type: 'array', required: true, message: '请选择你的所在地!' },
+              ],
+            })(<Cascader options={residences} />)}
+          </Form.Item>
+          <Form.Item label="性别">
+            <Radio.Group name="radiogroup" >
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Radio value={1} checked={type === 'student'} onChange={() => this.handleChange('type', 'student')}>男</Radio>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Radio value={2} checked={type === 'teacher'} onChange={() => this.handleChange('type', 'teacher')}>女</Radio>
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item {...tailFormItemLayout} className={RegisterCss.Button}>
+            <Button type="primary" htmlType="submit" onClick={this.register}>
+            &nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;&nbsp;&nbsp;
           </Button>
-        </Form.Item>
-      </Form>
+          </Form.Item>
+        </Form>
+      </div>
+
     );
   }
 }

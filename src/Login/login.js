@@ -62,7 +62,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div >
-                                <Button>注册</Button>
+                                <Button><Link to="/register">注册</Link></Button>
                             </div>
                         </Col>
                         </div>

@@ -69,7 +69,7 @@ const menu2 = (
             <Menu.Item><Link to="/register">志愿者</Link></Menu.Item>
         </Menu.SubMenu>
         <Menu.Item>
-            <Link to="/">登陆</Link>
+            <Link to="/login">登陆</Link>
         </Menu.Item>
     </Menu>
 );

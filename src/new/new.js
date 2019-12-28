@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row,Col,Icon,Layout,Carousel,Card,Menu,Dropdown,Button,message} from 'antd'
-
+import {Link} from 'react-router-dom'
 
 const { Header, Footer, Sider, Content } = Layout;
 var NewPageCss = require("./new.css")
@@ -14,12 +14,10 @@ const {Meta} =Card;
 const menu = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item key="1">
-        <Icon type="user" />
-        进入。。。
+        <Link to="/organization"><Icon type="safety-certificate" />&nbsp;组织机构</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Icon type="user" />
-        进入。。。
+        <Link to="/personal"><Icon type="user" />&nbsp;个人中心</Link>
       </Menu.Item>
     </Menu>
   );
@@ -42,7 +40,7 @@ export default class NewPage extends React.Component{
 
                             <div id="components-dropdown-demo-dropdown-button">
                                 <Dropdown overlay={menu}>
-                                <Button>
+                                <Button className={NewPageCss.button}>
                                     返回 <Icon type="down" />
                                 </Button>
                                 </Dropdown>
@@ -71,7 +69,7 @@ export default class NewPage extends React.Component{
                         </Col>
                         <Col span={19}>
                             <div className>
-                            <Carousel afterChange={onChange}>
+                            <Carousel autoplay>
                             <div className={NewPageCss.picture}>
                                 <img src="/picture.jpg"></img>
                             </div>

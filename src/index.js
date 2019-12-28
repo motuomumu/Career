@@ -13,6 +13,8 @@ import PersonalPage from './Personal/personal';
 import CenterPage from './Center/center';
 import Details from './Details/details';
 import Register from './Register/register'
+import NewsaPage from './Newsa/newsa';
+import NewsbPage from './Newsb/newsb';
 
 
 
@@ -34,8 +36,8 @@ class IndexPage extends React.Component{
                         <Route path="/details" component={Details}></Route>
                        
                         <Route path="/register" component={Register}></Route>
-                       
-                
+                        <Route path="/newsa" component={NewsaPage}></Route>
+                        <Route path="/newsb" component={NewsbPage}></Route>
                     </Switch>
                 </BrowserRouter>
                

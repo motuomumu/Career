@@ -13,6 +13,8 @@ import PersonalPage from './Personal/personal';
 import CenterPage from './Center/center';
 import Details from './Details/details';
 import Register from './Register/register'
+import Enlist from './Enlist/enlist';
+import Ending from './Ending/ending';
 
 
 
@@ -32,7 +34,9 @@ class IndexPage extends React.Component{
                         <Route path="/personal" component={PersonalPage}></Route>
                         <Route path="/center" component={CenterPage}></Route>
                         <Route path="/details" component={Details}></Route>
-                       
+                        <Route path="/enlist" component={Enlist}></Route>
+                        <Route path="/end" component={Ending}></Route>
+
                         <Route path="/register" component={Register}></Route>
                        
                 

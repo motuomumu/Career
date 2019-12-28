@@ -182,7 +182,7 @@ export default class Homepage extends React.Component {
                                         <Col span={8}></Col>
                                         <Col span={8}>
                                             <p><strong>Volunteers</strong></p>
-                                            <Button type="primary">efcsdfsad</Button>
+                                            <Button type="primary"><Link to="/details">查看详情</Link></Button>
                                         </Col>
                                     </Row>
                                 </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Input, Button, Menu, Dropdown, Icon, Carousel, Avatar } from 'antd'
 import { Link } from 'react-router-dom'
-import Homepage from '../HomePage/homepage';
+import Homepage from '../Homepage/homepage';
 import img1 from '../Image/孤儿院.jpg'
 import img2 from '../Image/福利院.jpg'
 import extra1 from '../Image/图9.jpg'

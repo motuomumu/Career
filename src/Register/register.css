@@ -1,4 +1,4 @@
-.form{
+/* .form{
     width: 60%;
     height: 600px;
     margin-left: 120px;
@@ -13,4 +13,7 @@
 .Button{
         width:100%;
 }
-    
+     */
+.form{
+        border: 1px solid black;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Input, Cascader, Select, Button, AutoComplete, Radio, Row, Col} from 'antd';
 import { reqRegister } from '../api'
+import {Link} from 'react-router-dom'
 const { Option } = Select;
 const AutoCompleteOption = AutoComplete.Option;
 const residences = [
@@ -160,7 +161,7 @@ class Register extends React.Component {
                         message: '请输入你的用户名!',
                       },
                     ],
-                  })(<Input />)}
+                  })(<Input placeholder="请输入你想要使用的用户名"/>)}
                 </Form.Item>
 
           <Form.Item label="密码" onChange={val => { this.handleChange('password', val) }} hasFeedback>
@@ -183,7 +184,7 @@ class Register extends React.Component {
                   validator: this.validateToNextPassword,
                 },
               ],
-            })(<Input.Password />)}
+            })(<Input.Password placeholder="请输入你的密码"/>)}
           </Form.Item>
           <Form.Item label="确认密码" hasFeedback onChange={val => { this.handleChange('confirm', val) }}>
             {getFieldDecorator('confirm', {
@@ -196,7 +197,7 @@ class Register extends React.Component {
                   validator: this.compareToFirstPassword,
                 },
               ],
-            })(<Input.Password onBlur={this.handleConfirmBlur} />)}
+            })(<Input.Password onBlur={this.handleConfirmBlur} placeholder="请再次确认你的密码"/>)}
           </Form.Item>
 
           <Form.Item label="所在地" onChange={val => { this.handleChange('residence', val) }}>
@@ -214,12 +215,23 @@ class Register extends React.Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Radio value={2} checked={type === 'teacher'} onChange={() => this.handleChange('type', 'teacher')}>女</Radio>
             </Radio.Group>
+          </Form.Item>          
+          <Form.Item label="特长">
+          <Input.TextArea rows={2} placeholder="请写出你的性格和特长"/>
           </Form.Item>
           <Form.Item {...tailFormItemLayout} className={RegisterCss.Button}>
             <Button type="primary" htmlType="submit" onClick={this.register}>
             &nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;&nbsp;&nbsp;
           </Button>
           </Form.Item>
+          <div className={RegisterCss.back}>
+            <Row>
+              <Col span={20}></Col>
+              <Col span={4}>
+                <Link to="/login">已有账号？点击登录</Link>
+              </Col>
+            </Row>
+          </div>
         </Form>
       </div>
 

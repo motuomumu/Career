@@ -1,0 +1,48 @@
+.all{
+    height: 700px;
+    width: 100%;
+    background-image: url(../Image/timg3.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.title{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.685);
+}
+.space{
+    height: 15px;
+    width: 100%;
+}
+.content{
+    height: 85px;
+    width: 100%;
+}
+.space2{
+    height: 30px;
+    width: 100%;
+}
+.form{
+    height: 570px;
+    width: 100%;
+    text-align: center;
+}
+.form1{
+    height: 520px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.575);
+    line-height: 35px;
+    text-align: center;
+    border: 3px solid rgba(0, 0, 0, 0.438);
+}
+.input1{
+    width: 300px;
+}
+.buttonbox{
+    height: 50px;
+    width: 100%;
+}
+.button{
+    width: 90px;
+}

@@ -134,12 +134,26 @@
 .china{
     margin-top: 25px;
 }
-
+.picture{
+    text-align: center;
+    height: 600px;
+ 
+    line-height: 160px;
+    overflow: hidden;
+}
+.statement1{
+    text-align: center;
+    font-size: 30px;
+    height: 600px;
+    line-height: 220px;
+    overflow: hidden;   
+    
+}
 .below{
     position: absolute;
     height: 160px;
     width: 100%;
-    margin-top: 800px;
+    
     background-color: rgb(43, 39, 39);
     color: rgb(252, 151, 0);
 }

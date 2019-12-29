@@ -135,7 +135,7 @@ export default class Details extends React.Component {
                                                     </div>
                                                     <div className={detailsCss.buspace}></div>
                                                     <div className={detailsCss.enlist}>
-                                                        <Link to="/">
+                                                        <Link to="/enlist">
                                                             <Button type="primary" className={detailsCss.actual}>点我报名</Button>
                                                         </Link>
                                                     </div>

@@ -1,3 +1,9 @@
+.background{
+    height: 150px;
+    width: 100%;
+    z-index: -99;
+    position: absolute;
+}
 .kernel{
     background: rgb(113, 192, 146);
     padding: 30px;
@@ -32,4 +38,8 @@
     box-shadow: 1px 1px 1px rgb(247, 253, 255);
     margin-top: -3px;
     transition: all 0.3s ease-in-out;
+}
+.t1{
+    height: 100px;
+    width: 80px;
 }

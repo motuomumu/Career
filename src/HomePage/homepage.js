@@ -7,6 +7,7 @@ import img3 from '../Image/img3.jpg'
 import img4 from '../Image/img4.jpg'
 import img5 from '../Image/img5.jpg'
 import img6 from '../Image/img6.jpg'
+import img7 from '../Image/art1.png'
 import china from '../Image/中国地图.png'
 import { formateDate } from './dataUtils'
 import { reqWeather } from '../api'
@@ -16,13 +17,13 @@ var HomepageCss = require("./homepage.css")
 const menu = (
     <Menu>
         <Menu.Item>
-            <Link to="">1st menu item</Link>
+            <Link to="/organization">组织机构</Link>
         </Menu.Item>
         <Menu.Item>
-            <Link to="">2nd menu item</Link>
+            <Link to="news">时事新闻</Link>
         </Menu.Item>
         <Menu.Item>
-            <Link to="">3rd menu item</Link>
+            <Link to="new">图墙展示</Link>
         </Menu.Item>
         <Menu.SubMenu title="城市">
             <Menu.Item>北京</Menu.Item>
@@ -45,22 +46,22 @@ function cancel(e) {
     message.success('已跳转至注册页面');
 }
 
-const menu1 = (
-    <Menu>
-        <Menu.Item>
-            <Link to="">关于我们</Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to="">联系我们</Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to="">反馈</Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to="">待定</Link>
-        </Menu.Item>
-    </Menu>
-);
+// const menu1 = (
+//     <Menu>
+//         <Menu.Item>
+//             <Link to="">关于我们</Link>
+//         </Menu.Item>
+//         <Menu.Item>
+//             <Link to="">联系我们</Link>
+//         </Menu.Item>
+//         <Menu.Item>
+//             <Link to="">反馈</Link>
+//         </Menu.Item>
+//         <Menu.Item>
+//             <Link to="">待定</Link>
+//         </Menu.Item>
+//     </Menu>
+// );
 
 const menu2 = (
     <Menu>
@@ -159,8 +160,9 @@ export default class Homepage extends React.Component {
                             </Dropdown>
                         </Col>
                         <Col span={3}>
-                            <Dropdown overlay={menu1}>
-                                <Button type="ghost">了解我们</Button>
+                            <Dropdown >
+                            
+                                <Button type="ghost"><Link to="">关于我们</Link></Button>
                             </Dropdown>
                         </Col>
                     </Row>
@@ -182,7 +184,7 @@ export default class Homepage extends React.Component {
                                         <Col span={8}></Col>
                                         <Col span={8}>
                                             <p><strong>Volunteers</strong></p>
-                                            <Button type="primary">efcsdfsad</Button>
+                                            <Button type="primary"><Link to="/details">查看详情</Link></Button>
                                         </Col>
                                     </Row>
                                 </div>
@@ -200,7 +202,7 @@ export default class Homepage extends React.Component {
                     </div>
                 </div>
                 <div className={HomepageCss.card}>
-                    <Row>.
+                    <Row>
                         <Col span={2}></Col>
                         <Col span={6}>
                             <div className={HomepageCss.box}>
@@ -208,7 +210,7 @@ export default class Homepage extends React.Component {
                                     <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
                                 </div>
                                 <div className={HomepageCss.hide1}>
-                                    <h2><strong>关爱儿童</strong></h2>
+                                    <img src={img7}></img>
                                     <Row>
                                         <Col span={2}></Col>
                                         <Col span={20}>
@@ -286,42 +288,87 @@ export default class Homepage extends React.Component {
                         <Col span={2}></Col>
                     </Row>
                 </div>
-                <div></div>
+                <div className={HomepageCss.mix}>
+                    
+                    <Row>
+                        <Col span={2}></Col>
+                        
+                        <Col span={9}>
+                        <Carousel autoplay>
+                            <div className={HomepageCss.picture}>
+                                 <img src="./h8.jpg"></img>
+                            </div>
+                            <div className={HomepageCss.picture}>
+                                <img src="./h1.jpg"></img>
+                            </div>
+                            <div className={HomepageCss.picture}>
+                                 <img src="./h4.jpg"></img>
+                            </div>
+                            <div className={HomepageCss.picture}>
+                                <img src="./h9.png"></img>
+                            </div>
+                            </Carousel>
+                        </Col>
+                        <Col span={2}></Col>
+                        <Col span={9}>
+                        <Carousel autoplay>
+                            <div className={HomepageCss.statement1}>
+                                <p>在光芒万丈之前，我们都要欣然接受眼下的难堪和不易，接受一个人的孤独和偶尔的无助。</p>
+                            </div>
+                            <div className={HomepageCss.statement1}>
+                                <p>别忘了答应自己要做的事，别忘了答应自己要去的远方，无论有多难，无论有多远。</p>
+                            </div>
+                            <div className={HomepageCss.statement1}>
+                                <p>不怕千万人阻挡，只怕自己投降。永远要活给自己看，而且笑容要特别灿烂。</p>
+                            </div>
+                            <div className={HomepageCss.statement1}>
+                                <p>不管你经历多痛的事情，到最后都会渐渐遗忘。没有什么能敌得过时光。</p>
+                            </div>
+                            <div className={HomepageCss.statement1}>
+                                <p>给自己一些时间，原谅做过很多傻事的自己。接受自己，爱自己；要相信，过去的都会过去
+                            ，该来的都在路上。</p>
+                            </div>
+                            
+                            </Carousel>
+                        </Col>
+                        
+                        
+                        
+                        <Col span={1}></Col>
+                    </Row>
+                    
+                </div>
 
 
                 <div className={HomepageCss.below}>
                     <Row type="flex" justify="center">
                         <Col span={3}></Col>
 
-                        <Col span={4}>
+                        <Col span={5}>
                             <h3>zhangmaolin</h3>
                             <h3>123456789</h3>
                             <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>
+                        <Col span={5}>
                             <h3>zengzhuhong</h3>
                             <h3>123456789</h3>
                             <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>
+                        <Col span={5}>
                             <h3>lilan</h3>
                             <h3>123456789</h3>
                             <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>
+                        <Col span={5}>
                             <h3>wangfei</h3>
                             <h3>123456789</h3>
                             <img src="/erweima.jpg" width={'60'} height={'60'}></img>
                         </Col>
 
-                        <Col span={4}>
-                            <h3>小可爱</h3>
-                            <h3>123456789</h3>
-                            <img src="/erweima.jpg" width={'60'} height={'60'}></img>
-                        </Col>
+                        
 
                         <Col span={1}></Col>
                     </Row>

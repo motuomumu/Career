@@ -12,7 +12,7 @@ import {
 } from 'antd';
 import Axios from 'axios';
 var RegisterCss = require("./register.css")
-export default class Register extends Component{
+class Register extends Component{
   constructor(props){
         super(props);
         this.state={}
@@ -23,52 +23,10 @@ export default class Register extends Component{
         })
       }
       upload = ()=>{
-        // var xhr=new XMLHttpRequest()
         var data={
           "username":this.state.username,
-          "password":this.state.password,
+          "password":this.state.password
         }
-      //   xhr.open("post","/user/register")
-      //   xhr.onreadystatechange=function(){
-      //    if( xhr.readyState==4){
-      //      if(xhr.status==200){
-          
-      //     console.log(xhr.responseText)
-      //     var result=JSON.parse(xhr.responseText)
-      //     if(result.state==2){
-      //       message.info("用户名已经存在")
-      //     }else if(result.state==1){
-      //       message.info("注册成功")
-      //       this.props.history.push("/homepage")
-      //     }
-          
-      //      }else{
-      //        message.info(xhr.status)
-      //      }
-      //    }
-      //   }
-      //   xhr.setRequestHeader('content-type','application/json')
-      //   xhr.send(JSON.stringify(data))
-     // }
-     
-      // fetch("/user/register",{
-      //   method:"POST",
-      //   headers:{
-      //     "Content-Type":"application/json"
-      //   },
-      //   body:JSON.stringify(data)
-      //  }
-      // ).then(response=>response.json())
-      // .then(result=>{
-      //   if (result.state==2) {
-      //     message.info("用户名已经存在")
-      //   }else if(result.state==1){
-      //     message.info("注册成功")
-      //   }
-      // }).catch(e=>{
-      //   message.error(e);
-      // })
-
 
       //axios
         Axios.post({
@@ -121,7 +79,7 @@ export default class Register extends Component{
     )
   }
 }
-
+export default Register;
 // import {
 //   Form,
 //   Input,

@@ -72,25 +72,6 @@ const menu2 = (
     </Menu>
 );
 
-// const bgGround1 = {
-//     display: 'inline-block',
-//     height: '600px',
-//     width: '100%',
-//     background: 'url(' + img1 + ')'
-// }
-// const bgGround2 = {
-//     display: 'inline-block',
-//     height: '600px',
-//     width: '100%',
-//     background: 'url(' + img2 + ')'
-// }
-// const bgGround3 = {
-//     display: 'inline-block',
-//     height: '600px',
-//     width: '100%',
-//     background: 'url(' + img3 + ')'
-// }
-
 export default class Homepage extends React.Component {
 
     state = {

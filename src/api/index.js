@@ -4,11 +4,11 @@ import jsonp from 'jsonp'
 
 
 
-//登录接口
-export const reqLogin = (account,password) => ajax('/auth/login',{account,password},'POST')
-//注册
-export const reqRegister = (account,password,confirm,residence) =>ajax('/auth/register',{account,password,confirm,residence},'POST')
-//添加用户
+// //登录接口
+// export const reqLogin = (account,password) => ajax('/user/login',{account,password},'POST')
+// //注册
+// export const reqRegister = (account,password,confirm,residence) =>ajax('/user/register',{account,password,confirm,residence},'POST')
+// //添加用户
 
  //获取天气信息
  export const reqWeather = ()=>{

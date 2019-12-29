@@ -1,7 +1,11 @@
 import React from 'react'
-import { Layout, Row, Col, Card, Menu, Icon, Button } from 'antd'
+import { Layout, Row, Col, Card, Menu, Icon, Button,Carousel } from 'antd'
 import { Link, withRouter, Switch, Route, Redirect } from 'react-router-dom'
 import NewsPage from '../News/news'
+import img1 from '../Image/o1.jpg'
+import img2 from '../Image/o2.jpg'
+import img3 from '../Image/o3.jpg'
+
 const { SubMenu } = Menu;
 const { Meta } = Card;
 const { Header, Footer, Content } = Layout;
@@ -36,13 +40,11 @@ class OrganizationPage extends React.Component {
               </Row>
             </div>
           </Header>
-          <div className={OrganizationPageCss.bg1} ><img src="/v2.jpg" width={1500} height={200}></img></div>
+          <div className={OrganizationPageCss.bg1} ><img src="/v2.jpg" width={1520} height={200}></img></div>
           <Content>
-
             <Row>
               <Col span={5}>
                 <div style={{ width: 256 }}>
-
                   <Menu
                     defaultSelectedKeys={[path]}
                     defaultOpenKeys={['sub1']}
@@ -56,25 +58,24 @@ class OrganizationPage extends React.Component {
                         <span>首页</span>
                       </Link>
                     </Menu.Item>
-                    <Menu.Item key="/news">
-                      <Link to='/news'>
+                    <Menu.Item key="2">
+                      <Link to='/new'>
                         <Icon type="desktop" />
                         <span>活动展示</span>
                       </Link>
-
                     </Menu.Item>
                     <Menu.Item key="/news">
                       <Link to='/news'>
                         <Icon type="inbox" />
-                        <span>Option 3</span>
+                        <span>组织介绍</span>
                       </Link>
                     </Menu.Item>
-                    <SubMenu
+                    {/* <SubMenu
                       key="sub1"
                       title={
                         <span>
                           <Icon type="mail" />
-                          <span>Navigation One</span>
+                          <span></span>
                         </span>
                       }
                     >
@@ -98,7 +99,7 @@ class OrganizationPage extends React.Component {
                           Option 8
                         </Link>
                       </Menu.Item>
-                    </SubMenu>
+                    </SubMenu> */}
                     <SubMenu
                       key="sub2"
                       title={
@@ -123,6 +124,17 @@ class OrganizationPage extends React.Component {
                 <Layout>
                   <Content style={{ margin: '24px 16px 0' }}>
                     <div style={{ padding: 24, background: '#fff', minHeight: 400, width: 900 }}>
+                      <Carousel autoplay>
+                        <div className={OrganizationPageCss.Carousel1}>
+                          <img src={img1}></img>
+                        </div>
+                        <div className={OrganizationPageCss.Carousel1}> 
+                          <img src={img2}></img>
+                        </div>
+                        <div className={OrganizationPageCss.Carousel1}>
+                          <img src={img3}></img>
+                        </div>
+                      </Carousel>
                       <Switch>
                         <Route path='/news' component={NewsPage}></Route>
                         <Route path='/news' component={NewsPage}></Route>
@@ -132,7 +144,7 @@ class OrganizationPage extends React.Component {
                     </div>
 
                   </Content>
-                  <Footer>SXT 善行图</Footer>
+                  {/* <Footer>SXT 善行图</Footer> */}
                 </Layout>
                 {/* <Card
                   hoverable

@@ -28,7 +28,7 @@ class OrganizationPage extends React.Component {
               <Row>
                 <Col span={1}></Col>
                 <Col span={2}><p><strong>组织中心</strong></p></Col>
-                <Col span={16}>1323</Col>
+                <Col span={16}></Col>
                 <Col span={2}><Link to="/center"><p>个人中心</p></Link></Col>
                 <Col span={1}><span>|</span></Col>
                 <Col span={1}><Link to="/homepage"><p>登出</p></Link></Col>

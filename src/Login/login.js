@@ -7,7 +7,32 @@ import 'antd/dist/antd.css'
 
 var LoginCss = require('./login.css')    
 class Login extends Component {
+    constructor(props){
+        super(props);
+        this.state={}
+        //为空时即为初始化
+    }
+    
+    changeValue=(e)=>{
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+    }//作用：修改state的value
 
+    loginpage = ()=>{
+        //XHR
+        var xhr = new XMLHttpRequest()
+        //往链接上发送数据前需配置一个响应
+        //例：open连接
+        xhr.open("post","/login")
+        //配置响应函数
+        xhr.onreadystatechange=function(params){
+            
+        }
+        //发送数据
+
+
+    }//没有参数的原因：都可以从state中进行读取
 
     render() {
         //const form = this.props.form;
@@ -19,16 +44,16 @@ class Login extends Component {
                     <Row>
                         <Col span={2}></Col>
                         <Col span={8}></Col>
-                        <div>  
+                        <div>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/homepage">首页</Link>                                
+                                <Link to="/homepage">首页</Link>
                             </div>                           
                         </Col>
                         <Col span={1}>
                             <div className={LoginCss.header1}>
                             <span> | </span>
-                            </div>                        
+                            </div>
                         </Col>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
@@ -80,8 +105,8 @@ class Login extends Component {
                                 ],
                             })(
                                 <Input
-                                    prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                    placeholder="用户"
+                                    prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} name="username"
+                                    placeholder="用户" value={this.state.username} onChange={e=>this.changeValue(e)}
                                 />,
                             )}
 
@@ -99,10 +124,10 @@ class Login extends Component {
                                 ],
                             })(<Input.Password
                                 prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                type="password"
-                                placeholder="密码" />)}
+                                type="password" name="password"
+                                placeholder="密码" value={this.state.password} onChange={e=>this.changeValue(e)}/>)}
                         </Form.Item>
-                        <Button type="primary" htmlType="submit" className={LoginCss.b1}>
+                        <Button type="primary" htmlType="submit" className={LoginCss.b1} onClick={this.loginpage}>
                             登录
                             </Button>
                         <Form.Item >

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, PageHeader, Input, DatePicker, Button ,notification} from 'antd'
+import { Row, Col, PageHeader, Input, DatePicker, Button ,notification, Form} from 'antd'
 import { Link } from 'react-router-dom'
 
 var enlistCss = require('../Enlist/enlist.css')
@@ -26,6 +26,37 @@ function onChange2(date, dateString) {
   };
 
 export default class Enlist extends React.Component {
+
+    // state={
+    //     username:'',
+    //     birthday:'',
+    //     address:'',
+    //     spacetime:'',
+    //     hopetime:'',
+    //     textbox:'',
+
+    //     confirmDirty:false,
+    //     autoCompleteResult: [],
+    // };
+    // enlist=()=>{
+    //     console.log(this.state)
+    // }
+    // handleSumbit = e =>{
+    //     e.preventDefault();
+    //     this.props.form.validateFieldsAndScroll((err,values)=>{
+    //         if(!err){
+    //             console.log('Received values of form:' ,values);
+    //             const {username,birthday,address,spacetime,hopetime,textbox} = values
+    //             enList().then(response => {
+    //                 console.log('success',response.date)
+    //             }).catch(error=>{
+    //                 console.log('fail',error)
+    //             })
+    //         }else{
+    //             console.log('失败')
+    //         }
+    //     });
+    // }
 
     render() {
 
@@ -59,7 +90,8 @@ export default class Enlist extends React.Component {
                                 <div className={enlistCss.space}></div>
                                 <h2>报名表单</h2><br />
                                 姓名：<Input className={enlistCss.input1} placeholder="请输入真实姓名"/><br/><br/>
-                                生日：<DatePicker onChange={onChange2} className={enlistCss.input1} placeholder="请选择您的出生日期"/><br/><br/>                                
+                                生日：<DatePicker onChange={onChange2} className={enlistCss.input1} placeholder="请选择您的出生日期"/><br/><br/>
+                                电话号码：<Input className={enlistCss.input1} placeholder="请输入您的电话号码"/><br/><br/>
                                 地址：<Input className={enlistCss.input1} placeholder="请输入您的住址"/><br/><br/>
                                 空闲时间段：<DatePicker.RangePicker
                                     showTime={{ format: 'HH:mm' }}

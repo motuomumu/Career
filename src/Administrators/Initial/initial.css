@@ -1,0 +1,69 @@
+.total{
+    height: 630px;
+    width: 100%;
+}
+.title{
+    height: 40px;
+    width: 100%;
+    background-color: violet;
+}
+.move1{
+    margin-top: 10px;
+}
+.move{
+    margin-top: 6px;
+    font-size: 18px;
+}
+.content{
+    height: 590px;
+    width: 100%;
+    background-color: violet;
+}
+.show{
+    height: 590px;
+    width: 100%;
+    background-color: white;
+}
+.fix{
+    height: 630px;
+    width: 100%;
+}
+.controduce{
+    margin-top: 30px;
+    height: 300px;
+    width: 100%;
+    border: 1px solid black;
+    margin-left: 70px;
+}
+.census{
+    height: 60px;
+    width: 80%;
+    margin-left: 35px;
+    border-bottom: 1px solid grey;
+}
+.address{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.address p{
+    font-size: 18px;
+    color: red;
+}
+.concrete{
+    height: 400px;
+    width: 100%;
+}
+.first{
+    height: 50px;
+    width: 100%;
+}
+.first{}
+.image{
+    margin-top: 0px;
+    height: 400px;
+    width: 100%;
+    background-image: url(../../Image/折线图.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 70px;
+}

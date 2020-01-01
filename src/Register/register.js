@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Input, Cascader, Select, Button, AutoComplete, Radio, Row, Col} from 'antd';
+import { Form, Input, Cascader, Select, Button, AutoComplete, Radio, Row, Col ,notification} from 'antd';
 import { reqRegister } from '../api'
 import {Link} from 'react-router-dom'
 const { Option } = Select;
@@ -56,6 +56,18 @@ const residences = [
     ],
   },
 ];
+
+const openNotification = () => {
+  notification.open({
+    message: '注册成功',
+    description:
+      '恭喜您注册成功，请在当前页面登陆',
+    onClick: () => {
+      console.log('Notification Clicked!');
+    },
+  });
+};
+
 var RegisterCss = require("./register.css")
 class Register extends React.Component {
   state = {
@@ -220,8 +232,10 @@ class Register extends React.Component {
           <Input.TextArea rows={2} placeholder="请写出你的性格和特长"/>
           </Form.Item>
           <Form.Item {...tailFormItemLayout} className={RegisterCss.Button}>
-            <Button type="primary" htmlType="submit" onClick={this.register}>
-            &nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;&nbsp;&nbsp;
+            <Button type="primary" htmlType="submit" onClick={this.register} onClick={openNotification}>
+              <Link to="/login">
+              &nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;&nbsp;&nbsp;
+              </Link>
           </Button>
           </Form.Item>
           <div className={RegisterCss.back}>

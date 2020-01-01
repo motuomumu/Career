@@ -204,7 +204,7 @@ export default class Details extends React.Component {
                                                         <Col span={1}>
                                                             <Icon type="unordered-list" style={{ fontSize: '20px' }}></Icon>
                                                         </Col>
-                                                        <Col span={3}>评论(5)</Col>
+                                                        <Col span={3}>评论(3)</Col>
                                                         <Col span={18}></Col>
                                                     </Row>
                                                 </div>
@@ -218,7 +218,7 @@ export default class Details extends React.Component {
                                                                     <Row>
                                                                         <Col span={4}>
                                                                             <div className={detailsCss.usertitle}>
-                                                                                <Link to="/" className={detailsCss.link}>
+                                                                                <Link to="/center" className={detailsCss.link}>
                                                                                     <Avatar icon="user"></Avatar> Karry
                                                                                 </Link>{/* 此处链接至个人中心 */}
                                                                             </div>
@@ -234,7 +234,7 @@ export default class Details extends React.Component {
                                                                     <Row>
                                                                         <Col span={4}>
                                                                             <div className={detailsCss.usertitle}>
-                                                                                <Link to="/" className={detailsCss.link}>
+                                                                                <Link to="/center" className={detailsCss.link}>
                                                                                     <Avatar icon="user"></Avatar> parose
                                                                                 </Link>{/* 此处链接至个人中心 */}
                                                                             </div>
@@ -250,7 +250,7 @@ export default class Details extends React.Component {
                                                                     <Row>
                                                                         <Col span={4}>
                                                                             <div className={detailsCss.usertitle}>
-                                                                                <Link to="/" className={detailsCss.link}>
+                                                                                <Link to="/center" className={detailsCss.link}>
                                                                                     <Avatar icon="user"></Avatar> Anmicius
                                                                                 </Link>{/* 此处链接至个人中心 */}
                                                                             </div>

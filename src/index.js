@@ -15,6 +15,7 @@ import Details from './Details/details';
 import Register from './Register/register'
 import Enlist from './Enlist/enlist';
 import Ending from './Ending/ending';
+import Administrators from './Administrators/administrators';
 
 
 
@@ -36,6 +37,7 @@ class IndexPage extends React.Component{
                         <Route path="/details" component={Details}></Route>
                         <Route path="/enlist" component={Enlist}></Route>
                         <Route path="/end" component={Ending}></Route>
+                        <Route path="/administrators" component={Administrators}></Route>
 
                         <Route path="/register" component={Register}></Route>
                        

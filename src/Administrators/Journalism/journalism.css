@@ -1,0 +1,16 @@
+.total{
+    height: 630px;
+    width: 100%;
+}
+.title{
+    height: 40px;
+    width: 100%;
+    background-color: violet;
+}
+.move1{
+    margin-top: 10px;
+}
+.move{
+    margin-top: 6px;
+    font-size: 18px;
+}

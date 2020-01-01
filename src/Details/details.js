@@ -12,10 +12,10 @@ var detailsCss = require('../Details/details.css')
 const menu = (
     <Menu>
         <Menu.Item key="0">
-            <Link to="/">功能1</Link>
+            <Link to="/homepage">返回首页</Link>
         </Menu.Item>
         <Menu.Item key="1">
-            <Link to="/">功能2</Link>
+            <Link to="/organization">查看组织</Link>
         </Menu.Item>
         <Menu.Item key="2">
             <Link to="/">功能3</Link>
@@ -135,7 +135,7 @@ export default class Details extends React.Component {
                                                     </div>
                                                     <div className={detailsCss.buspace}></div>
                                                     <div className={detailsCss.enlist}>
-                                                        <Link to="/">
+                                                        <Link to="/enlist">
                                                             <Button type="primary" className={detailsCss.actual}>点我报名</Button>
                                                         </Link>
                                                     </div>

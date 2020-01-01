@@ -1,17 +1,18 @@
 /* .form{
     width: 60%;
     height: 600px;
-    margin-left: 120px;
-    margin-top: 30px;
+    margin-left: 160px;
+    margin-top: 50px;
 }
-.h2{
+.form h2{
         width: 65%;
         height: 40px;
-        margin-left: 250px;
+        margin-left: 300px;
         text-align: center;
 }
 .Button{
         width:100%;
+        text-align: center;
 }
      */
 .form{

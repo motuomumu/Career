@@ -1,3 +1,17 @@
 .bg1{
     
 }
+.headercontent{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+.headercontent p{
+    font-size: 18px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.headercontent span{
+    text-align: center;
+    font-size: 18px;
+}

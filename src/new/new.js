@@ -79,7 +79,7 @@ export default class NewPage extends React.Component{
                                 <img src="/picture2.jpg"></img>
                             </div>
                             <div className={NewPageCss.picture}>
-                                <img src="/picture3.jpg"></img>
+                                <img src="/picture3.png"></img>
                             </div>
 
                             </Carousel>
@@ -103,60 +103,78 @@ export default class NewPage extends React.Component{
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel} src="/picture5.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel} src="/p1.jpg"/>}>
+                                    <Meta title="海边" description="志愿" />
                                     </Card>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel1} src="/1.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel1} src="/p2.png"/>}>
+                                    <Meta title="老人" description="志愿" />
                                     </Card>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel2} src="/3.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel2} src="/p3.png"/>}>
+                                    <Meta title="老人" description="志愿" />
                                     </Card>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel3} src="/bg.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel3} src="/p4.png"/>}>
+                                    <Meta title="风景" description="志愿" />
                                     </Card>
                                 </Col>
                                 <Col span={6}>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel4} src="/picture3.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel4} src="/p5.jpg"/>}>
+                                    <Meta title="儿童" description="志愿" />
                                     </Card>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel5} src="/4.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel5} src="/p6.jpg"/>}>
+                                    <Meta title="大标题" description="志愿" />
                                     </Card>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel6} src="/picture5.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel6} src="/p7.jpg"/>}>
+                                    <Meta title="大标题" description="志愿" />
                                     </Card>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel7} src="/picture.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel7} src="/p8.jpg"/>}>
+                                    <Meta title="大标题" description="志愿" />
                                     </Card>
                                 </Col>
                                 <Col span={8}>
                                     <Card 
                                     hoverable
                                     style={{width: 340 }}
-                                    cover={<img className={NewPageCss.panel8} src="/picture5.jpg"/>}>
-                                    <Meta title="大标题" description="bangbangbang" />
+                                    cover={<img className={NewPageCss.panel8} src="/p9.png"/>}>
+                                    <Meta title="大标题" description="志愿" />
+                                    </Card>
+                                    <Card 
+                                    hoverable
+                                    style={{width: 340 }}
+                                    cover={<img className={NewPageCss.panel8} src="/p10.png"/>}>
+                                    <Meta title="大标题" description="志愿" />
+                                    </Card>
+                                    <Card 
+                                    hoverable
+                                    style={{width: 340 }}
+                                    cover={<img className={NewPageCss.panel8} src="/p11.jpg"/>}>
+                                    <Meta title="大标题" description="志愿" />
+                                    </Card>
+                                    <Card 
+                                    hoverable
+                                    style={{width: 340 }}
+                                    cover={<img className={NewPageCss.panel8} src="/p12.jpg"/>}>
+                                    <Meta title="大标题" description="志愿" />
                                     </Card>
                                 </Col>
                             </Row>

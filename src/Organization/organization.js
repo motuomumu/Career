@@ -1,13 +1,13 @@
 import React from 'react'
 import { Layout, Row, Col, Card, Menu, Icon, Button } from 'antd'
-import {Link,withRouter,Switch,Route,Redirect} from 'react-router-dom'
+import { Link, withRouter, Switch, Route, Redirect } from 'react-router-dom'
 import NewsPage from '../News/news'
 const { SubMenu } = Menu;
 const { Meta } = Card;
 const { Header, Footer, Content } = Layout;
 var OrganizationPageCss = require('./organization.css')
 
- class OrganizationPage extends React.Component {
+class OrganizationPage extends React.Component {
   state = {
     collapsed: false,
   };
@@ -19,18 +19,30 @@ var OrganizationPageCss = require('./organization.css')
   };
   render() {
 
-    const path=this.props.location.pathname
+    const path = this.props.location.pathname
     return (
       <div className={OrganizationPageCss.header}>
         <Layout >
-          <Header ></Header>
-          <div className={OrganizationPageCss.bg1} ><img src="/v2.jpg" ></img></div>
+          <Header >
+            <div className={OrganizationPageCss.headercontent}>
+              <Row>
+                <Col span={1}></Col>
+                <Col span={2}><p><strong>组织中心</strong></p></Col>
+                <Col span={16}></Col>
+                <Col span={2}><Link to="/center"><p>个人中心</p></Link></Col>
+                <Col span={1}><span>|</span></Col>
+                <Col span={1}><Link to="/homepage"><p>登出</p></Link></Col>
+                <Col span={2}></Col>
+              </Row>
+            </div>
+          </Header>
+          <div className={OrganizationPageCss.bg1} ><img src="/v2.jpg" width={1500} height={200}></img></div>
           <Content>
 
             <Row>
               <Col span={5}>
                 <div style={{ width: 256 }}>
-                 
+
                   <Menu
                     defaultSelectedKeys={[path]}
                     defaultOpenKeys={['sub1']}
@@ -39,22 +51,22 @@ var OrganizationPageCss = require('./organization.css')
                     inlineCollapsed={this.state.collapsed}
                   >
                     <Menu.Item key="1">
-                      <Link to='/orgnization'>
-                      <Icon type="home" />
-                      <span>首页</span>
+                      <Link to='/organization'>
+                        <Icon type="home" />
+                        <span>首页</span>
                       </Link>
                     </Menu.Item>
                     <Menu.Item key="/news">
-                      <Link to='/news'> 
-                      <Icon type="desktop" />
-                      <span>Option 2</span>
+                      <Link to='/news'>
+                        <Icon type="desktop" />
+                        <span>活动展示</span>
                       </Link>
-                    
+
                     </Menu.Item>
                     <Menu.Item key="/news">
-                    <Link to='/news'> 
-                      <Icon type="inbox" />
-                      <span>Option 3</span>
+                      <Link to='/news'>
+                        <Icon type="inbox" />
+                        <span>Option 3</span>
                       </Link>
                     </Menu.Item>
                     <SubMenu
@@ -67,39 +79,39 @@ var OrganizationPageCss = require('./organization.css')
                       }
                     >
                       <Menu.Item key="/news">
-                      <Link to='/news'> 
-                        Option 5
+                        <Link to='/news'>
+                          Option 5
                         </Link>
-                        </Menu.Item>
-                        <Menu.Item key="6">
-                        <Link to='/news'>  
-                        Option 6
+                      </Menu.Item>
+                      <Menu.Item key="6">
+                        <Link to='/news'>
+                          Option 6
                         </Link>
-                        </Menu.Item>
-                        <Menu.Item key="7">
-                        <Link to='/news'> 
-                        Option 7
+                      </Menu.Item>
+                      <Menu.Item key="7">
+                        <Link to='/news'>
+                          Option 7
                         </Link>
-                        </Menu.Item>
-                        <Menu.Item key="8">
-                        <Link to='/news'> 
-                        Option 8
+                      </Menu.Item>
+                      <Menu.Item key="8">
+                        <Link to='/news'>
+                          Option 8
                         </Link>
-                        </Menu.Item>
+                      </Menu.Item>
                     </SubMenu>
                     <SubMenu
                       key="sub2"
                       title={
                         <span>
                           <Icon type="appstore" />
-                          <span>Navigation Two</span>
+                          <span>功能</span>
                         </span>
                       }
                     >
-                      <Menu.Item key="9">Option 9</Menu.Item>
-                      <Menu.Item key="10">Option 10</Menu.Item>
-                      <SubMenu key="sub3" title="Submenu">
-                        <Menu.Item key="11">Option 11</Menu.Item>
+                      <Menu.Item key="9">客服</Menu.Item>
+                      <Menu.Item key="10">反馈</Menu.Item>
+                      <SubMenu key="sub3" title="更多">
+                        <Menu.Item key="11">投诉</Menu.Item>
                         <Menu.Item key="12">Option 12</Menu.Item>
                       </SubMenu>
                     </SubMenu>
@@ -108,20 +120,20 @@ var OrganizationPageCss = require('./organization.css')
               </Col>
 
               <Col span={6}>
-              <Layout>
-      <Content style={{ margin: '24px 16px 0' }}>
-         <div style={{ padding: 24, background: '#fff', minHeight: 360,width:900}}>
+                <Layout>
+                  <Content style={{ margin: '24px 16px 0' }}>
+                    <div style={{ padding: 24, background: '#fff', minHeight: 400, width: 900 }}>
                       <Switch>
                         <Route path='/news' component={NewsPage}></Route>
                         <Route path='/news' component={NewsPage}></Route>
                         <Route path='/news' component={NewsPage}></Route>
                         {/* <Redirect to='/'></Redirect> */}
                       </Switch>
-                      </div> 
-        
-      </Content>
-      <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-    </Layout>
+                    </div>
+
+                  </Content>
+                  <Footer>SXT 善行图</Footer>
+                </Layout>
                 {/* <Card
                   hoverable
                   style={{ width: 320 }}

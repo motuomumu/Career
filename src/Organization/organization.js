@@ -5,6 +5,8 @@ import NewsPage from '../News/news'
 import img1 from '../Image/o1.jpg'
 import img2 from '../Image/o2.jpg'
 import img3 from '../Image/o3.jpg'
+import OnplayPage from './Onplay/onplay'
+import IntroducePage from './Introduce/introduce'
 
 const { SubMenu } = Menu;
 const { Meta } = Card;
@@ -27,8 +29,9 @@ class OrganizationPage extends React.Component {
     return (
       <div className={OrganizationPageCss.header}>
         <Layout >
-          <Header >
+          
             <div className={OrganizationPageCss.headercontent}>
+            
               <Row>
                 <Col span={1}></Col>
                 <Col span={2}><p><strong>组织中心</strong></p></Col>
@@ -39,8 +42,16 @@ class OrganizationPage extends React.Component {
                 <Col span={2}></Col>
               </Row>
             </div>
-          </Header>
-          <div className={OrganizationPageCss.bg1} ><img src="/v2.jpg" width={1520} height={200}></img></div>
+          
+          <Row>
+            <Col span={4}></Col>
+            <Col spa={18}>
+              <div className={OrganizationPageCss.bg1} ><img src="/v2.jpg" width={1000} height={200}></img></div>
+            </Col>
+            <Col span={2}></Col>
+          </Row>
+          
+          <div className={OrganizationPageCss.line}></div>
           <Content>
             <Row>
               <Col span={5}>
@@ -59,13 +70,13 @@ class OrganizationPage extends React.Component {
                       </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
-                      <Link to='/new'>
+                      <Link to='/onplay'>
                         <Icon type="desktop" />
                         <span>活动展示</span>
                       </Link>
                     </Menu.Item>
-                    <Menu.Item key="/news">
-                      <Link to='/news'>
+                    <Menu.Item key="/">
+                      <Link to='/introduce'>
                         <Icon type="inbox" />
                         <span>组织介绍</span>
                       </Link>
@@ -136,9 +147,9 @@ class OrganizationPage extends React.Component {
                         </div>
                       </Carousel>
                       <Switch>
-                        <Route path='/news' component={NewsPage}></Route>
-                        <Route path='/news' component={NewsPage}></Route>
-                        <Route path='/news' component={NewsPage}></Route>
+                        <Route path='/onplay' component={OnplayPage}></Route>
+                        <Route path='/introduce' component={IntroducePage}></Route>
+                        
                         {/* <Redirect to='/'></Redirect> */}
                       </Switch>
                     </div>

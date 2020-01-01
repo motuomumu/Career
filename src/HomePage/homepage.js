@@ -136,8 +136,8 @@ export default class Homepage extends React.Component {
                 <div className={HomepageCss.basic}>
                     <Row>
                         <Col span={2}></Col>
-                        <Col span={2}>图标</Col>
-                        <Col span={2}>
+                        <Col span={3}>{currentTime}</Col>
+                        <Col span={1}>
                             <Dropdown overlay={menu}>
                                 <Link className="ant-dropdown-link" trigger={['click']}>
                                     <Icon type="unordered-list" style={{ fontSize: '30px' }} />
@@ -162,7 +162,7 @@ export default class Homepage extends React.Component {
                         <Col span={3}>
                             <Dropdown >
                             
-                                <Button type="ghost"><Link to="">关于我们</Link></Button>
+                                <Button type="ghost">关于我们</Button>
                             </Dropdown>
                         </Col>
                     </Row>
@@ -175,14 +175,14 @@ export default class Homepage extends React.Component {
                                 <div className={HomepageCss.write1}>
                                     <Row>
                                         <Col span={2}></Col>
-                                        <Col span={6}>
-                                            <div className={HomepageCss.timebox}>
+                                        <Col span={15}>
+                                            {/* <div className={HomepageCss.timebox}>
                                                 <div className={HomepageCss.timemove}></div>
-                                                {currentTime}
-                                            </div>
+                                                
+                                            </div> */}
                                         </Col>
-                                        <Col span={8}></Col>
-                                        <Col span={8}>
+                                        
+                                        <Col span={7}>
                                             <p><strong>Volunteers</strong></p>
                                             <Button type="primary"><Link to="/details">查看详情</Link></Button>
                                         </Col>

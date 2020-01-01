@@ -26,8 +26,10 @@ class Login extends Component {
         //例：open连接
         xhr.open("post","/login")
         //配置响应函数
-        xhr.onreadystatechange=function(params){
+        xhr.onreadystatechange=function(params) {
             
+        }
+
         }
         //发送数据
 

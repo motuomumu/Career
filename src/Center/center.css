@@ -1,8 +1,11 @@
 .bg1{
     position: absolute;
     z-index: -1;
-    height: 1500px;
+    height: 900px;
     width: 100%;
+}
+.panda{
+    margin-left: 1200px;
 }
 .v2{
     height: 100px;

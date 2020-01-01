@@ -1,17 +1,32 @@
-.bg1{
-    
-}
-.headercontent{
-    height: 50px;
+/* .headerimg{
+    position: absolute;
+    z-index: -99;
+    height: 100px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.555);
+} */
+.headercontent{
+    height: 30px;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.555);
 }
 .headercontent p{
     font-size: 18px;
-    color: white;
+    color: rgba(39, 25, 25, 0.788);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .headercontent span{
     text-align: center;
     font-size: 18px;
+}
+.line{
+    height: 6px;
+    width: 100%;
+    background-color: rgba(63, 25, 25, 0.918);
+}
+.Carousel1{
+    text-align: center;
+    height: 600px;
+    line-height: 160px;
+    
+    overflow: hidden;
 }

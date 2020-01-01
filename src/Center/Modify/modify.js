@@ -7,7 +7,8 @@ import {Form,
     AutoComplete,
     Radio,
 } from 'antd'
-  
+
+
 var ModifyPageCss = require('./modify.css')
 const {Option} = Select;
 const AutoCompleteOption = AutoComplete.Option;
@@ -80,8 +81,8 @@ class ModifyPage extends React.Component{
           );
       
         return (
-            <div >
-            <Form {...formItemLayout} onSubmit={this.handleSubmit} className={ModifyPageCss.header}>
+            <div className={ModifyPageCss.header}>
+            <Form {...formItemLayout} onSubmit={this.handleSubmit} >
                     <Form.Item label="旧密码" hasFeedback>
                 {getFieldDecorator('oldpassword', {
                   rules: [
@@ -122,7 +123,7 @@ class ModifyPage extends React.Component{
                     })(<Input.Password onBlur={this.handleConfirmBlur} />)}
                   </Form.Item>
                   <div className={ModifyPageCss.Button}>
-                  <Button type="primary">确认</Button>
+                  <Button type="primary" >确认</Button>
                   </div>
                 </Form>
                 </div>

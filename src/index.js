@@ -13,9 +13,14 @@ import PersonalPage from './Personal/personal';
 import CenterPage from './Center/center';
 import Details from './Details/details';
 import Register from './Register/register'
+import NewsaPage from './Newsa/newsa';
+import NewsbPage from './Newsb/newsb';
 import Enlist from './Enlist/enlist';
 import Ending from './Ending/ending';
-
+import NewscPage from './Newsc/newsc';
+import NewsdPage from './Newsd/newsd';
+import NewsePage from './Newse/newse';
+import NewsfPage from './Newsf/newsf';
 
 
 class IndexPage extends React.Component{
@@ -36,10 +41,15 @@ class IndexPage extends React.Component{
                         <Route path="/details" component={Details}></Route>
                         <Route path="/enlist" component={Enlist}></Route>
                         <Route path="/end" component={Ending}></Route>
-
+                        
                         <Route path="/register" component={Register}></Route>
-                       
-                
+                        <Route path="/newsa" component={NewsaPage}></Route>
+                        <Route path="/newsb" component={NewsbPage}></Route>
+                        <Route path="/newsc" component={NewscPage}></Route>
+                        <Route path="/newsd" component={NewsdPage}></Route>
+                        <Route path="/newse" component={NewsePage}></Route>
+                        <Route path="/newsf" component={NewsfPage}></Route>
+                        
                     </Switch>
                 </BrowserRouter>
                

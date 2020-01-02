@@ -57,6 +57,15 @@ export default class Enlist extends React.Component {
     //         }
     //     });
     // }
+        constructor(props){
+            super(props);
+            this.state={}
+        }
+        changeValue=(e)=>{
+            this.setState({
+                [e.target.mane]:e.target
+            })
+        }
 
     render() {
 

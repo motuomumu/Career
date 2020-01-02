@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Icon, Input, Button, Checkbox, Row, Col,} from 'antd';
+import { Form, Icon, Input, Button, Checkbox, Row, Col,message} from 'antd';
 import {Link} from 'react-router-dom'
 import './login.css'
 import 'antd/dist/antd.css'
@@ -19,22 +19,61 @@ class Login extends Component {
         })
     }//作用：修改state的value
 
-    loginpage = ()=>{
-        //XHR
+    // loginpage = ()=>{
+    //     //XHR
+    //     var xhr = new XMLHttpRequest()
+    //     var data={
+    //         "username":this.state.username,
+    //         "password":this.state.password
+    //     }
+    //     //往链接上发送数据前需配置一个响应
+    //     //例：open连接
+    //     xhr.open("post","/login")
+    //     //配置响应函数
+    //     xhr.onreadystatechange=function() {
+    //         if (xhr.readyState==4) {
+    //             if (xhr.status==200) {
+    //                 message.info(xhr.responseText)
+    //                 console.log(xhr.responseText)
+    //             }else{
+    //                 message.info(xhr.status)
+    //             }
+    //         }
+    //     }
+        
+    //     //发送数据
+    //     xhr.send()
+    //     }
+    // }//没有参数的原因：都可以从state中进行读取 
+    loginpage =()=>{
         var xhr = new XMLHttpRequest()
-        //往链接上发送数据前需配置一个响应
-        //例：open连接
+        var data={
+            "username":this.state.username,
+            "password":this.state.password
+        }
         xhr.open("post","/login")
-        //配置响应函数
-        xhr.onreadystatechange=function(params) {
-            
+
+        xhr.onreadystatechange=function() {
+            if (xhr.readyState==4) {
+                if (xhr.status==200) {
+                    message.info(xhr.responseText)
+                    console.log(xhr.responseText)
+                    var result = JSON.parse(xhr.responseText)//将JSON转换回为前端对象
+                    if (result.state==2) {
+                        message.info("密码错误！")
+                    }else if (result.state==1) {
+                        message.info("登陆成功！")
+                        this.props.history.push("/homepage")//上学期讲过history.push，上网搜索
+                    }
+                }else{
+                    message.info(xhr.status)
+                }
+            }
         }
-
-        }
-        //发送数据
-
-
-    }//没有参数的原因：都可以从state中进行读取
+        xhr.setRequestHeader('content-type','application/json')
+        console.log(JSON.stringify(data))
+        xhr.send(JSON.stringify(data))
+    }
 
     render() {
         //const form = this.props.form;

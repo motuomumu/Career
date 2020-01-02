@@ -1,9 +1,10 @@
-/* .headerimg{
+.background{
     position: absolute;
     z-index: -99;
-    height: 100px;
+    height: 250px;
     width: 100%;
-} */
+}
+
 .headercontent{
     height: 30px;
     width: 100%;
@@ -23,10 +24,12 @@
     width: 100%;
     background-color: rgba(63, 25, 25, 0.918);
 }
+.Content{
+    background-color: rgba(87, 42, 21, 0.342);
+}
 .Carousel1{
     text-align: center;
     height: 600px;
-    line-height: 160px;
-    
+    line-height: 160px;   
     overflow: hidden;
 }

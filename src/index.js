@@ -17,6 +17,8 @@ import NewsaPage from './Newsa/newsa';
 import NewsbPage from './Newsb/newsb';
 import Enlist from './Enlist/enlist';
 import Ending from './Ending/ending';
+import Administrators from './Administrators/administrators';
+
 import NewscPage from './Newsc/newsc';
 import NewsdPage from './Newsd/newsd';
 import NewsePage from './Newse/newse';
@@ -30,25 +32,27 @@ class IndexPage extends React.Component{
                 <BrowserRouter>
                     <Switch>
                         <Route path='/' exact component={Homepage}></Route>
-                        <Route path="/login" component={LoginPage}></Route>
-                        <Route path="/news" component={NewsPage}></Route>
-                        <Route path='/homepage' component={Homepage}></Route>
-                        <Route path="/new" component={NewPage}></Route>
-                        <Route path='/RichText' component={EditorConvertToHTML}></Route>
-                        <Route path="/organization" component={OrganizationPage}></Route>
-                        <Route path="/personal" component={PersonalPage}></Route>
-                        <Route path="/center" component={CenterPage}></Route>
-                        <Route path="/details" component={Details}></Route>
-                        <Route path="/enlist" component={Enlist}></Route>
-                        <Route path="/end" component={Ending}></Route>
+                        <Route path="/user/login" component={LoginPage}></Route>
+                        <Route path="/user/news" component={NewsPage}></Route>
+                        <Route path='/user/homepage' component={Homepage}></Route>
+                        <Route path="/user/new" component={NewPage}></Route>
+                        <Route path='/user/RichText' component={EditorConvertToHTML}></Route>
+                        <Route path="/user/organization" component={OrganizationPage}></Route>
+                        <Route path="/user/personal" component={PersonalPage}></Route>
+                        <Route path="/user/center" component={CenterPage}></Route>
+                        <Route path="/user/details" component={Details}></Route>
+                        <Route path="/user/enlist" component={Enlist}></Route>
+                        <Route path="/user/end" component={Ending}></Route>
+                        <Route path="/administrators" component={Administrators}></Route>
+
                         
-                        <Route path="/register" component={Register}></Route>
-                        <Route path="/newsa" component={NewsaPage}></Route>
-                        <Route path="/newsb" component={NewsbPage}></Route>
-                        <Route path="/newsc" component={NewscPage}></Route>
-                        <Route path="/newsd" component={NewsdPage}></Route>
-                        <Route path="/newse" component={NewsePage}></Route>
-                        <Route path="/newsf" component={NewsfPage}></Route>
+                        <Route path="/user/register" component={Register}></Route>
+                        <Route path="/user/newsa" component={NewsaPage}></Route>
+                        <Route path="/user/newsb" component={NewsbPage}></Route>
+                        <Route path="/user/newsc" component={NewscPage}></Route>
+                        <Route path="/user/newsd" component={NewsdPage}></Route>
+                        <Route path="/user/newse" component={NewsePage}></Route>
+                        <Route path="/user/newsf" component={NewsfPage}></Route>
                         
                     </Switch>
                 </BrowserRouter>

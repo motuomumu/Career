@@ -57,8 +57,8 @@ export default class NewsaPage extends React.Component{
                     title="志愿新闻"
                     subTitle="针心针意"
                     extra={[
-                        <Link to='./news'> <Button key="1">新闻主页</Button></Link>,
-                        <Link to='./login'> <Button key="2">登录</Button></Link>,
+                        <Link to='/user/news'> <Button key="1">新闻主页</Button></Link>,
+                        <Link to='/user/login'> <Button key="2">登录</Button></Link>,
                         <PandaIcon style={{ fontSize: '32px' }} />                        
                     ]}
                     />

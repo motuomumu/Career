@@ -62,7 +62,7 @@ export default class NewsPage extends React.Component{
                         
                             <Col span={1}></Col>
                         <Col span={6}>
-                            <Link to='./newsa'>
+                            <Link to='/user/newsa'>
                             <Card
                                 style={{ width:360}} style={{ height:450}}
                                 hoverable={true} className={NewsPageCss.content}
@@ -85,7 +85,7 @@ export default class NewsPage extends React.Component{
                         </Col>
                             <Col span={1}></Col>
                         <Col span={6}>
-                            <Link to='./newsb'>
+                            <Link to='/user/newsb'>
                         <Card
                                 style={{ width: 360 } } style={{ height: 450 } }
                                 hoverable={true} className={NewsPageCss.content}
@@ -105,7 +105,7 @@ export default class NewsPage extends React.Component{
                         </Col>  
                         <Col span={1}></Col>
                         <Col span={6}>
-                        <Link to='./newsc'>
+                        <Link to='/user/newsc'>
                             <Card
                                 style={{ width: 360 }} style={{ height: 450 }}  hoverable={true} className={NewsPageCss.content}>                             
                                     <Meta       
@@ -131,7 +131,7 @@ export default class NewsPage extends React.Component{
                         
                             <Col span={1}></Col>
                         <Col span={6}>
-                            <Link to='./newsd'>
+                            <Link to='/user/newsd'>
                             <Card
                                 style={{ width:360}} style={{ height:380}}
                                 hoverable={true} className={NewsPageCss.content}
@@ -147,7 +147,7 @@ export default class NewsPage extends React.Component{
                         </Col>
                             <Col span={1}></Col>
                         <Col span={6}>
-                            <Link to='./newse'>
+                            <Link to='/user/newse'>
                         <Card
                             style={{ width: 360 } } style={{ height: 380 } }
                             hoverable={true} className={NewsPageCss.content}
@@ -161,7 +161,7 @@ export default class NewsPage extends React.Component{
                         </Col>  
                         <Col span={1}></Col>
                         <Col span={6}>
-                        <Link to='./newsf'>
+                        <Link to='/user/newsf'>
                             <Card
                                 style={{ width: 360 }} style={{ height: 380 }}  hoverable={true}
                                 className={NewsPageCss.content} cover={<img  src="/f.jpg"/>}>                             

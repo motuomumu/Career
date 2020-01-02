@@ -36,9 +36,9 @@ class OrganizationPage extends React.Component {
                 <Col span={1}></Col>
                 <Col span={2}><p><strong>组织中心</strong></p></Col>
                 <Col span={16}></Col>
-                <Col span={2}><Link to="/center"><p>个人中心</p></Link></Col>
+                <Col span={2}><Link to="/user/center"><p>个人中心</p></Link></Col>
                 <Col span={1}><span>|</span></Col>
-                <Col span={1}><Link to="/homepage"><p>登出</p></Link></Col>
+                <Col span={1}><Link to="/user/homepage"><p>登出</p></Link></Col>
                 <Col span={2}></Col>
               </Row>
             </div>
@@ -64,19 +64,19 @@ class OrganizationPage extends React.Component {
                     inlineCollapsed={this.state.collapsed}
                   >
                     <Menu.Item key="1">
-                      <Link to='/organization'>
+                      <Link to='/user/organization'>
                         <Icon type="home" />
                         <span>首页</span>
                       </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
-                      <Link to='/onplay'>
+                      <Link to='/user/onplay'>
                         <Icon type="desktop" />
                         <span>活动展示</span>
                       </Link>
                     </Menu.Item>
                     <Menu.Item key="/">
-                      <Link to='/introduce'>
+                      <Link to='/user/introduce'>
                         <Icon type="inbox" />
                         <span>组织介绍</span>
                       </Link>

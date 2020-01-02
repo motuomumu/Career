@@ -12,10 +12,10 @@ var detailsCss = require('../Details/details.css')
 const menu = (
     <Menu>
         <Menu.Item key="0">
-            <Link to="/homepage">返回首页</Link>
+            <Link to="/user/homepage">返回首页</Link>
         </Menu.Item>
         <Menu.Item key="1">
-            <Link to="/organization">查看组织</Link>
+            <Link to="/user/organization">查看组织</Link>
         </Menu.Item>
         <Menu.Item key="2">
             <Link to="/">功能3</Link>
@@ -50,13 +50,13 @@ export default class Details extends React.Component {
                             />
                         </Col>
                         <Col span={1}>
-                            <Link to="/login">
+                            <Link to="/user/login">
                                 <Button type="primary">登陆</Button>
                             </Link>
                         </Col>
                         <Col span={1} className={detailsCss.jiange}><span>|</span></Col>
                         <Col span={1}>
-                            <Link to="/register">
+                            <Link to="/user/register">
                                 <Button type="primary">注册</Button>
                             </Link>
                         </Col>
@@ -112,7 +112,7 @@ export default class Details extends React.Component {
                                                         <Row>
                                                             <Col span={2}></Col>
                                                             <Col span={2}>
-                                                                <Link to="/"><Avatar size="large" icon="book"></Avatar></Link>{/* 此处链接至组织主页 */}
+                                                                <Link to="/user/organization"><Avatar size="large" icon="book"></Avatar></Link>{/* 此处链接至组织主页 */}
                                                             </Col>
                                                             <Col span={1}></Col>
                                                             <Col span={16}>
@@ -135,7 +135,7 @@ export default class Details extends React.Component {
                                                     </div>
                                                     <div className={detailsCss.buspace}></div>
                                                     <div className={detailsCss.enlist}>
-                                                        <Link to="/enlist">
+                                                        <Link to="/user/enlist">
                                                             <Button type="primary" className={detailsCss.actual}>点我报名</Button>
                                                         </Link>
                                                     </div>
@@ -218,7 +218,7 @@ export default class Details extends React.Component {
                                                                     <Row>
                                                                         <Col span={4}>
                                                                             <div className={detailsCss.usertitle}>
-                                                                                <Link to="/center" className={detailsCss.link}>
+                                                                                <Link to="/user/center" className={detailsCss.link}>
                                                                                     <Avatar icon="user"></Avatar> Karry
                                                                                 </Link>{/* 此处链接至个人中心 */}
                                                                             </div>
@@ -234,7 +234,7 @@ export default class Details extends React.Component {
                                                                     <Row>
                                                                         <Col span={4}>
                                                                             <div className={detailsCss.usertitle}>
-                                                                                <Link to="/center" className={detailsCss.link}>
+                                                                                <Link to="/user/center" className={detailsCss.link}>
                                                                                     <Avatar icon="user"></Avatar> parose
                                                                                 </Link>{/* 此处链接至个人中心 */}
                                                                             </div>
@@ -250,7 +250,7 @@ export default class Details extends React.Component {
                                                                     <Row>
                                                                         <Col span={4}>
                                                                             <div className={detailsCss.usertitle}>
-                                                                                <Link to="/center" className={detailsCss.link}>
+                                                                                <Link to="/user/center" className={detailsCss.link}>
                                                                                     <Avatar icon="user"></Avatar> Anmicius
                                                                                 </Link>{/* 此处链接至个人中心 */}
                                                                             </div>
@@ -291,7 +291,7 @@ export default class Details extends React.Component {
                                         <Col span={7}>
                                             <div className={detailsCss.exspace2}></div>
                                             <div className={detailsCss.words}>
-                                                <h3><Link to="/details" className={detailsCss.link}>成都乡村支教活动</Link></h3>
+                                                <h3><Link to="/user/details" className={detailsCss.link}>成都乡村支教活动</Link></h3>
                                             </div>
                                             <div>
                                                 <h4>活动地点：成都附近的乡村小学</h4>
@@ -314,7 +314,7 @@ export default class Details extends React.Component {
                                         <Col span={7}>
                                             <div className={detailsCss.exspace2}></div>
                                             <div className={detailsCss.words}>
-                                                <h3><Link to="/details" className={detailsCss.link}>养老院志愿者活动</Link></h3>
+                                                <h3><Link to="/user/details" className={detailsCss.link}>养老院志愿者活动</Link></h3>
                                             </div>
                                             <div>
                                                 <h4>活动地点：四川省成都市锦江区经天路</h4>

@@ -14,10 +14,10 @@ const {Meta} =Card;
 const menu = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item key="1">
-        <Link to="/organization"><Icon type="safety-certificate" />&nbsp;组织机构</Link>
+        <Link to="/user/organization"><Icon type="safety-certificate" />&nbsp;组织机构</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link to="/personal"><Icon type="user" />&nbsp;个人中心</Link>
+        <Link to="/user/personal"><Icon type="user" />&nbsp;个人中心</Link>
       </Menu.Item>
     </Menu>
   );

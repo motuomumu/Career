@@ -233,7 +233,7 @@ class Register extends React.Component {
           </Form.Item>
           <Form.Item {...tailFormItemLayout} className={RegisterCss.Button}>
             <Button type="primary" htmlType="submit" onClick={this.register} onClick={openNotification}>
-              <Link to="/login">
+              <Link to="/user/login">
               &nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;&nbsp;&nbsp;
               </Link>
           </Button>
@@ -242,7 +242,7 @@ class Register extends React.Component {
             <Row>
               <Col span={20}></Col>
               <Col span={4}>
-                <Link to="/login">已有账号？点击登录</Link>
+                <Link to="/user/login">已有账号？点击登录</Link>
               </Col>
             </Row>
           </div>

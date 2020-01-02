@@ -17,13 +17,13 @@ var HomepageCss = require("./homepage.css")
 const menu = (
     <Menu>
         <Menu.Item>
-            <Link to="/organization">组织机构</Link>
+            <Link to="/user/organization">组织机构</Link>
         </Menu.Item>
         <Menu.Item>
-            <Link to="news">时事新闻</Link>
+            <Link to="/user/news">时事新闻</Link>
         </Menu.Item>
         <Menu.Item>
-            <Link to="new">图墙展示</Link>
+            <Link to="/user/new">图墙展示</Link>
         </Menu.Item>
         <Menu.SubMenu title="城市">
             <Menu.Item>北京</Menu.Item>
@@ -66,11 +66,11 @@ function cancel(e) {
 const menu2 = (
     <Menu>
         <Menu.SubMenu title="注册">
-            <Menu.Item><Link to="/register">机构</Link></Menu.Item>
-            <Menu.Item><Link to="/register">志愿者</Link></Menu.Item>
+            <Menu.Item><Link to="/user/register">机构</Link></Menu.Item>
+            <Menu.Item><Link to="/user/register">志愿者</Link></Menu.Item>
         </Menu.SubMenu>
         <Menu.Item>
-            <Link to="/login">登陆</Link>
+            <Link to="/user/login">登陆</Link>
         </Menu.Item>
     </Menu>
 );
@@ -184,7 +184,7 @@ export default class Homepage extends React.Component {
                                         
                                         <Col span={7}>
                                             <p><strong>Volunteers</strong></p>
-                                            <Button type="primary"><Link to="/details">查看详情</Link></Button>
+                                            <Button type="primary"><Link to="/user/details">查看详情</Link></Button>
                                         </Col>
                                     </Row>
                                 </div>
@@ -276,7 +276,7 @@ export default class Homepage extends React.Component {
                                 <br />
 
                                 <Button type="dashed">
-                                    <Link to="/login">
+                                    <Link to="/user/login">
                                         <p>加入我们</p>
                                     </Link>
                                 </Button>

@@ -88,7 +88,7 @@ class Login extends Component {
                         <div>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/homepage">首页</Link>
+                                <Link to="/user/homepage">首页</Link>
                             </div>                           
                         </Col>
                         <Col span={1}>
@@ -98,7 +98,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/personal">个人中心</Link>
+                                <Link to="/user/personal">个人中心</Link>
                             </div>
                         </Col>
                         <Col span={1}>
@@ -108,7 +108,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/organization">公益组织</Link>
+                                <Link to="/user/organization">公益组织</Link>
                             </div>
                         </Col>
                         <Col span={1}>
@@ -118,7 +118,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/news">新闻</Link>
+                                <Link to="/user/news">新闻</Link>
                             </div>
                         </Col>
                         <Col span={1}>
@@ -128,7 +128,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div >
-                                <Button><Link to="/register">注册</Link></Button>
+                                <Button><Link to="/user/register">注册</Link></Button>
                             </div>
                         </Col>
                         </div>

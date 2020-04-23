@@ -31,7 +31,6 @@ export default class EditorConvertToHTML extends Component {
           editorStyle={{border:'1px solid black',minHeight:200,paddingLeft:10}}
           onEditorStateChange={this.onEditorStateChange}
         />
-       
       </div>
     );
   }

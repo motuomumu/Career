@@ -64,7 +64,7 @@ export default class PersonalPage extends React.Component{
                         <Row>
                             <Col span={12}>
                             <div className={PersonalPageCss.volunteer}>
-                                volunteer
+                                Career Guidance
                             </div>
                             </Col>
                             <Col span={10}>

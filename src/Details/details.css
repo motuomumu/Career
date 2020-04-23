@@ -20,12 +20,12 @@
 }
 .space2{
     height: 25px;
-    background-color: rgba(248, 232, 198, 0.719);
+    background-color: rgba(255, 247, 230, 0.719);
 }
 .content{
     height: 2200px;
     width: 100%;
-    background-color: rgba(248, 232, 198, 0.719);
+    background-color: rgba(255, 247, 230, 0.719);
 }
 .left{
     border-right: 2px solid rgba(44, 43, 43, 0.24);
@@ -227,7 +227,7 @@
 .excontent{
     height: 300px;
     width: 100%;
-    background-color: rgba(247, 17, 63, 0.39);
+    background-color: rgba(126, 110, 113, 0.308);
 }
 .exspace2{
     height: 20px;

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Row, Col, Icon, Menu, Dropdown, Input, Avatar, Button, Popconfirm, message, Carousel } from 'antd'
 import { Link } from 'react-router-dom'
-import img1 from '../Image/img1.jpg'
-import img2 from '../Image/img2.jpg'
-import img3 from '../Image/img3.jpg'
-import img4 from '../Image/img4.jpg'
-import img5 from '../Image/img5.jpg'
+import img1 from '../Image/学生.jpg'
+import img2 from '../Image/西装.jpg'
+import img3 from '../Image/就业.jpg'
+import img4 from '../Image/就业.jpg'
+import img5 from '../Image/学生.jpg'
 import img6 from '../Image/img6.jpg'
-import img7 from '../Image/art1.png'
+//import img7 from '../Image/art1.png'
 import china from '../Image/中国地图.png'
 import { formateDate } from './dataUtils'
 import { reqWeather } from '../api'
@@ -17,13 +17,13 @@ var HomepageCss = require("./homepage.css")
 const menu = (
     <Menu>
         <Menu.Item>
-            <Link to="/organization">组织机构</Link>
+            <Link to="">时事新闻</Link>
         </Menu.Item>
         <Menu.Item>
-            <Link to="news">时事新闻</Link>
+            <Link to="">时事新闻</Link>
         </Menu.Item>
         <Menu.Item>
-            <Link to="new">图墙展示</Link>
+            <Link to="">时事新闻</Link>
         </Menu.Item>
         <Menu.SubMenu title="城市">
             <Menu.Item>北京</Menu.Item>
@@ -66,8 +66,8 @@ function cancel(e) {
 const menu2 = (
     <Menu>
         <Menu.SubMenu title="注册">
-            <Menu.Item><Link to="/register">机构</Link></Menu.Item>
-            <Menu.Item><Link to="/register">志愿者</Link></Menu.Item>
+            <Menu.Item><Link to="/register">教师</Link></Menu.Item>
+            <Menu.Item><Link to="/register">学生</Link></Menu.Item>
         </Menu.SubMenu>
         <Menu.Item>
             <Link to="/login">登陆</Link>
@@ -117,8 +117,8 @@ export default class Homepage extends React.Component {
                 <div className={HomepageCss.basic}>
                     <Row>
                         <Col span={2}></Col>
-                        <Col span={2}>图标</Col>
-                        <Col span={2}>
+                        <Col span={3}>{currentTime}</Col>
+                        <Col span={1}>
                             <Dropdown overlay={menu}>
                                 <Link className="ant-dropdown-link" trigger={['click']}>
                                     <Icon type="unordered-list" style={{ fontSize: '30px' }} />
@@ -142,8 +142,9 @@ export default class Homepage extends React.Component {
                         </Col>
                         <Col span={3}>
                             <Dropdown >
-                            
-                                <Button type="ghost"><Link to="">关于我们</Link></Button>
+                            <Link to="">
+                                <Button type="ghost">关于我们</Button>
+                                </Link>
                             </Dropdown>
                         </Col>
                     </Row>
@@ -156,15 +157,11 @@ export default class Homepage extends React.Component {
                                 <div className={HomepageCss.write1}>
                                     <Row>
                                         <Col span={2}></Col>
-                                        <Col span={6}>
-                                            <div className={HomepageCss.timebox}>
-                                                <div className={HomepageCss.timemove}></div>
-                                                {currentTime}
-                                            </div>
+                                        <Col span={15}>
                                         </Col>
-                                        <Col span={8}></Col>
-                                        <Col span={8}>
-                                            <p><strong>Volunteers</strong></p>
+                                        
+                                        <Col span={7}>
+                                            <p><strong>Career Guidance</strong></p>
                                             <Button type="primary"><Link to="/details">查看详情</Link></Button>
                                         </Col>
                                     </Row>
@@ -191,7 +188,7 @@ export default class Homepage extends React.Component {
                                     <img src={img1} height={600} width={380} className={HomepageCss.change1}></img>
                                 </div>
                                 <div className={HomepageCss.hide1}>
-                                    <img src={img7}></img>
+                                    {/* <img src={img7}></img> */}
                                     <Row>
                                         <Col span={2}></Col>
                                         <Col span={20}>
@@ -200,7 +197,7 @@ export default class Homepage extends React.Component {
                                         </Col>
                                         <Col span={2}></Col>
                                     </Row>
-                                    <Button type="primary">报名</Button>
+                                    <Button type="primary">查看更多</Button>
                                 </div>
                             </div>
                         </Col>
@@ -243,22 +240,21 @@ export default class Homepage extends React.Component {
                         <Col span={1}></Col>
                         <Col span={10}>
                             <div className={HomepageCss.character}>
-                                <h1>在中国的角落寻找你的足迹</h1>
+                                <h1>在中国的每个角落寻找适合你的岗位</h1>
                                 <br />
                                 <p>无论你从哪里来，又或者去向何方</p>
                                 <br />
                                 <p>都请勇敢的向前一步</p>
                                 <br />
-                                <p>善行图从世界各地为志愿者们寻找安全、有趣又充满挑战与价值的志愿者项目，
-                                    让你可以充分的体现自我的价值。
+                                <p>我们会为你提供最好的服务，为你推荐最优质的工作岗位包你满意
                                 </p>
                                 <br />
-                                <p>加入我们，你将会接受世界爱的赠礼与自然真诚的回馈</p>
+                                <p>相信我们，你将会接受世界爱的赠礼与自然真诚的回馈</p>
                                 <br />
 
                                 <Button type="dashed">
-                                    <Link to="/login">
-                                        <p>加入我们</p>
+                                    <Link to="/RichText">
+                                        <p>编辑简历</p>
                                     </Link>
                                 </Button>
                             </div>

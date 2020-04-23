@@ -38,7 +38,7 @@
 .img01{
     height: 580px;
     width: 100%;
-    background-image: url(../Image/i1.png);
+    background-image: url(../Image/就业.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -51,33 +51,33 @@
 }
 
 
-.timebox{
+/* .timebox{
     height: 100px;
     width: 100%;
     z-index: 3;
 }
 .timemove{
     font-size: 30px;
-}
+} */
 
 .img02{
     height: 580px;
     width: 100%;
-    background-image: url(../Image/i2.png);
+    background-image: url(../Image/00.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .img03{
     height: 580px;
     width: 100%;
-    background-image: url(../Image/i3.jpg);
+    background-image: url(../Image/00.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .img04{
     height: 580px;
     width: 100%;
-    background-image: url(../Image/i4.jpg);
+    background-image: url(../Image/00.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

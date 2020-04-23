@@ -6,8 +6,7 @@ export default class JoinPage extends React.Component{
     render(){
         return(
             <div className={JoinPageCss.font}>
-                暂未加入组织
-                
+                暂未申请
                 <Empty image={Empty.PRESENTED_IMAGE_SIMPLE}></Empty>
                 <Pagination defaultCurrent={1} total={1}></Pagination>
             </div>

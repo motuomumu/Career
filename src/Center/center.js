@@ -165,7 +165,7 @@ export default class CenterPage extends React.Component {
 
                       <Link to="/join">
                         <Card style={{ width: 120 }} className={CenterPageCss.Card}>
-                          我的组织
+                          我的预约
                             </Card>
                       </Link>
 

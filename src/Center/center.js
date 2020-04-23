@@ -151,35 +151,35 @@ export default class CenterPage extends React.Component {
                 <div>
                   <div className={CenterPageCss.set}>
                     <Col span={17}>
-                      <Link to="/profile">
+                      <Link to="/user/profile">
                         <Card hoverable style={{ width: 120 }} className={CenterPageCss.Card}>
                           个人资料
                             </Card>
                       </Link>
 
-                      <Link to="/dynamic">
+                      <Link to="/user/dynamic">
                         <Card style={{ width: 120 }} className={CenterPageCss.Card} >
                           我的动态
                             </Card>
                       </Link>
 
-                      <Link to="/join">
+                      <Link to="/user/join">
                         <Card style={{ width: 120 }} className={CenterPageCss.Card}>
                           我的预约
                             </Card>
                       </Link>
 
-                      <Link to="/modify">
+                      <Link to="/user/modify">
                         <Card style={{ width: 120 }} className={CenterPageCss.Card}>
                           修改密码
                             </Card>
                       </Link>
                     </Col>
                     <Switch>
-                      <Route path="/modify" component={ModifyPage}></Route>
-                      <Route path="/profile" component={ProfilePage}></Route>
-                      <Route path="/dynamic" component={DynamicPage}></Route>
-                      <Route path="/join" component={JoinPage}></Route>
+                      <Route path="/user/modify" component={ModifyPage}></Route>
+                      <Route path="/user/profile" component={ProfilePage}></Route>
+                      <Route path="/user/dynamic" component={DynamicPage}></Route>
+                      <Route path="/user/join" component={JoinPage}></Route>
                     </Switch>
                   </div>
                 </div>

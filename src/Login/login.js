@@ -19,32 +19,6 @@ class Login extends Component {
         })
     }//作用：修改state的value
 
-    // loginpage = ()=>{
-    //     //XHR
-    //     var xhr = new XMLHttpRequest()
-    //     var data={
-    //         "username":this.state.username,
-    //         "password":this.state.password
-    //     }
-    //     //往链接上发送数据前需配置一个响应
-    //     //例：open连接
-    //     xhr.open("post","/login")
-    //     //配置响应函数
-    //     xhr.onreadystatechange=function() {
-    //         if (xhr.readyState==4) {
-    //             if (xhr.status==200) {
-    //                 message.info(xhr.responseText)
-    //                 console.log(xhr.responseText)
-    //             }else{
-    //                 message.info(xhr.status)
-    //             }
-    //         }
-    //     }
-        
-    //     //发送数据
-    //     xhr.send()
-    //     }
-    // }//没有参数的原因：都可以从state中进行读取 
     loginpage =()=>{
         var xhr = new XMLHttpRequest()
         var data={
@@ -88,7 +62,7 @@ class Login extends Component {
                         <div>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/homepage">首页</Link>
+                                <Link to="/user/homepage">首页</Link>
                             </div>                           
                         </Col>
                         <Col span={1}>
@@ -98,7 +72,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/personal">个人中心</Link>
+                                <Link to="/user/personal">个人中心</Link>
                             </div>
                         </Col>
                         <Col span={1}>
@@ -118,7 +92,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div className={LoginCss.header1}>
-                                <Link to="/news">新闻</Link>
+                                <Link to="/user/news">新闻</Link>
                             </div>
                         </Col>
                         <Col span={1}>
@@ -128,7 +102,7 @@ class Login extends Component {
                         </Col>
                         <Col span={2}>
                             <div >
-                                <Button><Link to="/register">注册</Link></Button>
+                                <Button><Link to="/user/register">注册</Link></Button>
                             </div>
                         </Col>
                         </div>

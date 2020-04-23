@@ -70,7 +70,7 @@ const menu2 = (
             <Menu.Item><Link to="/register">学生</Link></Menu.Item>
         </Menu.SubMenu>
         <Menu.Item>
-            <Link to="/login">登陆</Link>
+            <Link to="/user/login">登陆</Link>
         </Menu.Item>
     </Menu>
 );

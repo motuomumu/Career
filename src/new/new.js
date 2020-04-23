@@ -17,7 +17,7 @@ const menu = (
         <Link to="/organization"><Icon type="safety-certificate" />&nbsp;主页</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link to="/personal"><Icon type="user" />&nbsp;个人中心</Link>
+        <Link to="/user/personal"><Icon type="user" />&nbsp;个人中心</Link>
       </Menu.Item>
     </Menu>
   );

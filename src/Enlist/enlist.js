@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, PageHeader, Input, DatePicker, Button ,notification, Form} from 'antd'
+import { Row, Col, PageHeader, Input, DatePicker, Button ,notification, Form, message} from 'antd'
 import { Link } from 'react-router-dom'
 
 var enlistCss = require('../Enlist/enlist.css')
@@ -35,6 +35,40 @@ export default class Enlist extends React.Component {
                 [e.target.mane]:e.target
             })
         }
+        enlist=()=>{
+            var xhr = new XMLHttpRequest()
+            var data={
+                "username":this.state.username,
+                "birthday":this.state.birthday,
+                "telenumber":this.state.telenumber,
+                "address":this.state.address,
+                "spacetime":this.state.spacetime,
+                "hopetime":this.state.hopetime
+            }
+            xhr.open("post","/enlist")
+
+            xhr.onreadystatechange=function() {
+                if (xhr.readyState==4) {
+                    if (xhr.status==200) {
+                        message.info(xhr.responseText)
+                        console.log(xhr.responseText)
+                        var result = JSON.parse(xhr.responseText)
+                        if (result.state==2) {
+                            message.info("有未填完整的表格信息")
+                        }else if (result.state==1) {
+                            message.info("提交成功！")
+                            this.props.history.push("/homepage")
+                        }
+                    }else{
+                        message.info(xhr.status)
+                    }
+                }
+            }
+            xhr.setRequestHeader('content-type','application/json')
+            console.log(JSON.stringify(data))
+            xhr.send(JSON.stringify(data))
+        }
+        
 
     render() {
 
@@ -74,13 +108,13 @@ export default class Enlist extends React.Component {
                                     <Row>
                                         <Col span={5}></Col>
                                         <Col span={7}>
-                                            <Button className={enlistCss.button} type="primary">
-                                                <Link to="/end">提交</Link>
+                                            <Button className={enlistCss.button} type="primary" onClick={this.enlist}>
+                                                <Link to="/user/end">提交</Link>
                                             </Button>
                                         </Col>
                                         <Col span={7}>
                                             <Button onClick={() => openNotificationWithIcon('error')} className={enlistCss.button} type="primary">
-                                                <Link to="/details">取消</Link>
+                                                <Link to="/user/details">取消</Link>
                                             </Button>
                                         </Col>
                                         <Col span={5}></Col>
